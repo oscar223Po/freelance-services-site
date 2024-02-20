@@ -104,7 +104,7 @@
 		line-height: 150%;
 		height: toRem(36);
 		font-size: toRem(24);
-		font-family: "BeVietnam";
+		font-family: $fontFamilyThird;
 		&::before {
 			font-size: toRem(32);
 			padding-bottom: toRem(6);

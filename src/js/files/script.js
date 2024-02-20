@@ -3,8 +3,9 @@
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
-// ================[ JavaScript Section ]================
+//--------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
+	// ================[ JavaScript Section Heading Scroll ]================
 	var headingScroll = document.querySelector(".heading");
 	window.addEventListener("scroll", function () {
 		var scrollPosition = window.scrollY;
@@ -14,5 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			headingScroll.classList.remove("_heading-scroll");
 		}
 	});
+	// ================[ JavaScript Section ]================
 });
 //--------------------------------------------------------------

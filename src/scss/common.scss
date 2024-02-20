@@ -142,7 +142,7 @@
 .title {
 	font-weight: 500;
 	line-height: 110%;
-	font-family: "GeneralSans";
+	font-family: $fontFamilySecond;
 	&--large {
 		@include adaptiveValue("font-size", 72, 32);
 	}
