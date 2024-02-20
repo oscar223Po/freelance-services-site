@@ -1,0 +1,165 @@
+//========================================================================================================================================================
+// Заголовки, загальні БЕМ блоки та інше...
+//========================================================================================================================================================
+::-webkit-scrollbar {
+	width: toRem(1);
+	border-radius: toRem(10);
+	background-color: $neutral90Color;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: toRem(10);
+	background-color: $neutral10Color;
+}
+::selection {
+	background-color: rgba(#a60101, 0.5);
+}
+//========================================================================================================================================================
+// Search Input Big
+.search {
+	position: relative;
+	&__input {
+		width: 100%;
+		outline: none;
+		min-height: toRem(72);
+		padding-left: toRem(24);
+		border-radius: toRem(100);
+		padding-right: toRem(272);
+		&::placeholder {
+			color: $neutral60Color;
+			transition: opacity 0.3s;
+		}
+		&:focus::placeholder {
+			opacity: 0;
+		}
+		@media (max-width: $mobile) {
+			min-height: toRem(60);
+			border-radius: toRem(30);
+			padding-right: toRem(210);
+		}
+		@media (max-width: $mobileSmall) {
+			padding-right: toRem(70);
+		}
+	}
+
+	&__select {
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		right: toRem(112);
+		height: toRem(40);
+		position: absolute;
+		border-left: toRem(1) solid $neutral40Color;
+		@media (max-width: $mobile) {
+			right: toRem(70);
+			height: toRem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+
+	&__button {
+		top: 0;
+		bottom: 0;
+		display: flex;
+		margin: auto 0;
+		right: toRem(8);
+		width: toRem(56);
+		height: toRem(56);
+		border-radius: 50%;
+		position: absolute;
+		align-items: center;
+		font-size: toRem(20);
+		justify-content: center;
+		background-color: $primary100Color;
+		transition: background-color 0.5s ease 0s;
+		border: toRem(1) solid rgba($primary100Color, 0.3);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($warning100Color, 0.5);
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(44);
+			height: toRem(44);
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Heading Title & Text
+.headed {
+	&--white {
+		color: $neutral10Color;
+		.headed__text {
+			color: $neutral40Color;
+		}
+	}
+	&--center {
+		text-align: center;
+		margin: toRem(0) auto;
+		.headed__label {
+			justify-content: center;
+		}
+	}
+
+	&__label {
+		gap: toRem(4);
+		display: flex;
+		font-weight: 600;
+		line-height: 150%;
+		align-items: center;
+		color: $primary100Color;
+		@include adaptiveValue("font-size", 16, 14);
+		&::before {
+			content: "";
+			display: flex;
+			height: toRem(2);
+			border-radius: toRem(10);
+			background-color: $primary100Color;
+			@include adaptiveValue("width", 36, 24);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 12);
+		}
+	}
+
+	&__text {
+		color: $neutral70Color;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 18);
+		}
+	}
+
+	&__button {
+	}
+}
+.title {
+	font-weight: 500;
+	line-height: 110%;
+	font-family: "GeneralSans";
+	&--large {
+		@include adaptiveValue("font-size", 72, 32);
+	}
+
+	&--medium {
+		@include adaptiveValue("font-size", 52, 24);
+	}
+}
+.text {
+	&--large {
+		line-height: 130%;
+		@include adaptiveValue("font-size", 20, 14);
+	}
+
+	&--minimum {
+		line-height: 135%;
+		@include adaptiveValue("font-size", 18, 12);
+	}
+}
+//========================================================================================================================================================

@@ -1,0 +1,63 @@
+//========================================================================================================================================================
+// Advance
+.advance {
+	position: relative;
+	background-color: $neutral100Color;
+	@include adaptiveValue("padding-top", 192, 100);
+	@include adaptiveValue("padding-bottom", 96, 30);
+	&::before {
+		content: "";
+		height: 100%;
+		top: toRem(-261);
+		left: toRem(-80);
+		width: toRem(1200);
+		position: absolute;
+		transform: rotate(-25deg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url("@img/landing-pages/decore.svg");
+	}
+	@media (min-width: $mobile) {
+		&::after {
+			content: "";
+			height: 100%;
+			top: toRem(0);
+			right: toRem(0);
+			bottom: toRem(0);
+			width: 37.222222%;
+			position: absolute;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url("@img/landing-pages/home-page/advance-image.jpg");
+		}
+	}
+	&__container-min {
+		z-index: 1;
+		position: relative;
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: 62% 1fr;
+		}
+	}
+
+	&__body {
+	}
+
+	&__headed {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 64, 32);
+		}
+	}
+
+	&__search {
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__tip {
+		line-height: 150%;
+		color: $neutral40Color;
+	}
+}
+//========================================================================================================================================================

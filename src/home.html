@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"O&Lance (Landing - Home) - MainPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-become.htm',{})
+		<main class="page">
+			<!-- [Advance] -->
+			<section class="advance">
+				<div class="advance__container-min">
+					<div class="advance__body">
+						<div class="advance__headed headed headed--white">
+							<h1 class="headed__title title title--large">Advance Your Career in a Digitalized World</h1>
+							<div class="headed__text text text--large"><p>We provide you with unrestricted access to the greatest courses from the top specialists, allowing you to learn countless of practical lessons in a range of topics.</p></div>
+						</div>
+						<div class="advance__search search">
+							<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Search course, event or author" class="search__input">
+							<div class="search__select">
+								<select name="form[]" data-class-modif="search">
+									<option value="1" selected>Courses №1</option>
+									<option value="2">Courses №2</option>
+									<option value="3">Courses №3</option>
+								</select>
+							</div>
+							<button type="button" class="search__button _icon-search"></button>
+						</div>
+						<div class="advance__tip">Popular : UI Design, UX Research, Android, C++</div>
+					</div>
+				</div>
+			</section>
+			<!-- [About-Us] -->
+			<section class="about-us">
+				<div class="about-us__container-min">
+					<div class="about-us__headed headed">
+						<div class="headed__label">About Us</div>
+						<h3 class="headed__title title title--medium">We Help Grow Student Careers</h3>
+						<div class="headed__text text text--minimum"><p>We've been doing this for over a decade since we always want to give learning services that aren't taught in schools.</p></div>
+						<a href="" class="headed__button button button--bord">Read More</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+// ========================================================================================================================================================
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+.button {
+	display: inline-flex;
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	font-weight: 600;
+	line-height: 150%;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("font-size", 16, 12);
+	transition:
+		background-color 0.5s ease 0s,
+		color 0.5s ease 0s,
+		border 0.5s ease 0s;
+	border: toRem(1) solid $primary100Color;
+	@include adaptiveValue("min-height", 56, 40);
+	@include adaptiveValue("padding-left", 32, 20);
+	@include adaptiveValue("padding-right", 32, 20);
+	@include adaptiveValue("border-radius", 50, 30);
+	&--bord {
+		color: $primary100Color;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $neutral10Color;
+				background-color: rgba($neutral100Color, 0.75);
+				border: toRem(1) solid rgba($neutral100Color, 0.75);
+			}
+		}
+	}
+
+	&--full {
+		background-color: $primary100Color;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($warning100Color, 0.5);
+				border: toRem(1) solid rgba($primary100Color, 0.3);
+			}
+		}
+	}
+
+	/*
+	&--fw {
+		width: 100%;
+	}
+	*/
+}
+// ========================================================================================================================================================
