@@ -217,6 +217,12 @@
 	}
 
 	&__link-opt {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $primary100Color;
+			}
+		}
 	}
 }
 .actions-heading {

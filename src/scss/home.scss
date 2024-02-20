@@ -61,6 +61,45 @@
 	}
 }
 //========================================================================================================================================================
+// Colab
+.colab {
+	@include adaptiveValue("padding-top", 100, 40);
+	&__container-min {
+	}
+
+	&__label {
+		text-align: center;
+		span {
+			color: $neutral70Color;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+
+	&__logos {
+		display: grid;
+		row-gap: toRem(15);
+		grid-template-columns: repeat(auto-fit, minmax(toRem(230), 1fr));
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $mobileSmall) {
+			img {
+				transform: scale(1.3);
+			}
+		}
+	}
+}
+//========================================================================================================================================================
 // About-Us
 .about-us {
 	@include adaptiveValue("padding-top", 100, 40);
