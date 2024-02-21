@@ -100,6 +100,45 @@
 	}
 }
 //========================================================================================================================================================
+// Popular
+.popular {
+	@include adaptiveValue("padding-top", 100, 40);
+	&__container-min {
+	}
+
+	&__headed {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 64, 32);
+		}
+	}
+
+	&__tabs {
+	}
+}
+.tabs-popular {
+	&__navigation {
+	}
+
+	&__content {
+	}
+
+	&__body {
+	}
+}
+.courses {
+	text-align: center;
+	&__items {
+		display: grid;
+		text-align: left;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(300), 1fr));
+		@include adaptiveValue("gap", 32, 12, 0, $containerWidth, 767.98);
+	}
+
+	&__view-more {
+		@include adaptiveValue("margin-top", 48, 24);
+	}
+}
+//========================================================================================================================================================
 // About-Us
 .about-us {
 	@include adaptiveValue("padding-top", 100, 40);

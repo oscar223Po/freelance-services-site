@@ -101,6 +101,19 @@
 			justify-content: center;
 		}
 	}
+	&--column {
+		display: grid;
+		row-gap: toRem(18);
+		@media (min-width: $mobile) {
+			align-items: end;
+			justify-content: space-between;
+			grid-template-columns: 48.739496% 46.05042%;
+		}
+	}
+
+	&__main {
+		margin-bottom: toRem(-3);
+	}
 
 	&__label {
 		gap: toRem(4);
@@ -160,6 +173,160 @@
 	&--minimum {
 		line-height: 135%;
 		@include adaptiveValue("font-size", 18, 12);
+	}
+}
+//========================================================================================================================================================
+// Styles For Tab Navigation
+.navigation {
+	overflow-x: auto;
+	border-bottom: toRem(2) solid $neutral40Color;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 32, 24);
+	}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&__navs {
+		white-space: nowrap;
+	}
+
+	&__title {
+		font-weight: 600;
+		line-height: 150%;
+		position: relative;
+		color: $neutral60Color;
+		@include adaptiveValue("font-size", 16, 12);
+		padding: toRem(0) toRem(24) toRem(10) toRem(24);
+		&._tab-active {
+			color: $neutral100Color;
+			border-bottom: toRem(2) solid $primary100Color;
+		}
+		@media (max-width: $tablet) {
+			padding: toRem(0) toRem(12) toRem(6) toRem(12);
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Course Article
+.course {
+	overflow: hidden;
+	border-radius: toRem(16);
+	@media (max-width: $mobile) {
+		border-radius: toRem(8);
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		display: grid;
+		border-left: toRem(1) solid $neutral40Color;
+		border-right: toRem(1) solid $neutral40Color;
+		border-bottom: toRem(1) solid $neutral40Color;
+		border-radius: toRem(0) toRem(0) toRem(16) toRem(16);
+		@include adaptiveValue("gap", 20, 10, 0, $containerWidth, 767.98);
+		@include adaptiveValue("padding", 24, 12, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			border-radius: toRem(0) toRem(0) toRem(8) toRem(8);
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 130%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__form {
+		border-bottom: toRem(1.5) solid $neutral40Color;
+		@include adaptiveValue("padding-bottom", 20, 10, 0, $containerWidth, 767.98);
+	}
+
+	&__labels {
+	}
+}
+.form-course {
+	display: flex;
+	gap: toRem(5);
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	&__name {
+		display: flex;
+		line-height: 150%;
+		align-items: center;
+		color: $neutral70Color;
+		&::after {
+			content: "";
+			display: flex;
+			width: toRem(4);
+			height: toRem(4);
+			border-radius: 50%;
+			margin-left: toRem(8);
+			background-color: $neutral40Color;
+		}
+	}
+
+	&__rate {
+		display: flex;
+		gap: toRem(4);
+		line-height: 150%;
+		align-items: center;
+		color: $neutral70Color;
+		&::before {
+			font-size: toRem(20);
+			color: $warning100Color;
+		}
+	}
+
+	&__cost {
+		font-weight: 500;
+		line-height: 120%;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 32, 20);
+	}
+}
+.labels-course {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: toRem(5);
+	align-items: center;
+	column-gap: toRem(10);
+	justify-content: space-between;
+	&__item {
+		display: flex;
+		gap: toRem(4);
+		line-height: 155%;
+		position: relative;
+		align-items: center;
+		font-size: toRem(14);
+		color: $neutral70Color;
+		&::before {
+			font-size: toRem(20);
+			color: $neutral100Color;
+		}
+		@media (min-width: em(1190)) {
+			&:not(:last-child) {
+				&::after {
+					content: "";
+					display: flex;
+					width: toRem(4);
+					height: toRem(4);
+					position: absolute;
+					border-radius: 50%;
+					right: toRem(-10);
+					background-color: $neutral40Color;
+				}
+			}
+		}
 	}
 }
 //========================================================================================================================================================

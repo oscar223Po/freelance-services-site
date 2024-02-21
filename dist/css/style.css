@@ -782,6 +782,16 @@ h6 {
           justify-content: center;
 }
 
+.headed--column {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1.125rem;
+}
+
+.headed__main {
+  margin-bottom: -0.1875rem;
+}
+
 .headed__label {
   gap: 0.25rem;
   display: -webkit-box;
@@ -825,6 +835,158 @@ h6 {
 
 .text--minimum {
   line-height: 135%;
+}
+
+.navigation {
+  overflow-x: auto;
+  border-bottom: 0.125rem solid #e0e0e0;
+}
+
+.navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.navigation__navs {
+  white-space: nowrap;
+}
+
+.navigation__title {
+  font-weight: 600;
+  line-height: 150%;
+  position: relative;
+  color: #a8a8a8;
+  padding: 0rem 1.5rem 0.625rem 1.5rem;
+}
+
+.navigation__title._tab-active {
+  color: #1c1c1c;
+  border-bottom: 0.125rem solid #32bca3;
+}
+
+.course {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.course__image img {
+  width: 100%;
+}
+
+.course__content {
+  display: -ms-grid;
+  display: grid;
+  border-left: 0.0625rem solid #e0e0e0;
+  border-right: 0.0625rem solid #e0e0e0;
+  border-bottom: 0.0625rem solid #e0e0e0;
+  border-radius: 0rem 0rem 1rem 1rem;
+}
+
+.course__title {
+  font-weight: 500;
+  line-height: 130%;
+  color: #252525;
+}
+
+.course__form {
+  border-bottom: 0.09375rem solid #e0e0e0;
+}
+
+.form-course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3125rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-course__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 150%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7c7c7c;
+}
+
+.form-course__name::after {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  background-color: #e0e0e0;
+}
+
+.form-course__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  line-height: 150%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7c7c7c;
+}
+
+.form-course__rate::before {
+  font-size: 1.25rem;
+  color: #ffc761;
+}
+
+.form-course__cost {
+  font-weight: 500;
+  line-height: 120%;
+  font-family: "GeneralSans";
+}
+
+.labels-course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 0.3125rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.625rem;
+     -moz-column-gap: 0.625rem;
+          column-gap: 0.625rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.labels-course__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  line-height: 155%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.875rem;
+  color: #7c7c7c;
+}
+
+.labels-course__item::before {
+  font-size: 1.25rem;
+  color: #1c1c1c;
 }
 
 /*
@@ -1091,6 +1253,17 @@ h6 {
   max-width: 100%;
 }
 
+.courses {
+  text-align: center;
+}
+
+.courses__items {
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+}
+
 .about-us__container-min {
   display: -ms-grid;
   display: grid;
@@ -1164,6 +1337,17 @@ h6 {
 }
 
 @media (min-width: 47.99875em) {
+  .headed--column {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-grid-columns: 48.739496% 46.05042%;
+    grid-template-columns: 48.739496% 46.05042%;
+  }
+
   .heading {
     -webkit-transition: background-color 0.5s ease 0s;
     transition: background-color 0.5s ease 0s;
@@ -1200,6 +1384,21 @@ h6 {
     display: grid;
     -ms-grid-columns: 62% 1fr;
     grid-template-columns: 62% 1fr;
+  }
+}
+
+@media (min-width: 74.375em) {
+  .labels-course__item:not(:last-child)::after {
+    content: "";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 0.25rem;
+    height: 0.25rem;
+    position: absolute;
+    border-radius: 50%;
+    right: -0.625rem;
+    background-color: #e0e0e0;
   }
 }
 
@@ -1256,6 +1455,34 @@ h6 {
     font-size: 1.125rem;
   }
 
+  .navigation:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .navigation__title {
+    font-size: 1rem;
+  }
+
+  .course__content {
+    gap: 1.25rem;
+  }
+
+  .course__content {
+    padding: 1.5rem;
+  }
+
+  .course__title {
+    font-size: 1.25rem;
+  }
+
+  .course__form {
+    padding-bottom: 1.25rem;
+  }
+
+  .form-course__cost {
+    font-size: 2rem;
+  }
+
   .main-heading {
     gap: 3.75rem;
   }
@@ -1282,6 +1509,22 @@ h6 {
 
   .colab {
     padding-top: 6.25rem;
+  }
+
+  .popular {
+    padding-top: 6.25rem;
+  }
+
+  .popular__headed:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  .courses__items {
+    gap: 2rem;
+  }
+
+  .courses__view-more {
+    margin-top: 3rem;
   }
 
   .about-us {
@@ -1350,6 +1593,22 @@ h6 {
     font-size: 0.75rem;
   }
 
+  .navigation:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .navigation__title {
+    font-size: 0.75rem;
+  }
+
+  .course__title {
+    font-size: 1rem;
+  }
+
+  .form-course__cost {
+    font-size: 1.25rem;
+  }
+
   .advance {
     padding-top: 6.25rem;
   }
@@ -1366,6 +1625,18 @@ h6 {
     padding-top: 2.5rem;
   }
 
+  .popular {
+    padding-top: 2.5rem;
+  }
+
+  .popular__headed:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .courses__view-more {
+    margin-top: 1.5rem;
+  }
+
   .about-us {
     padding-top: 2.5rem;
   }
@@ -1376,6 +1647,10 @@ h6 {
 }
 
 @media (max-width: 61.99875em) {
+  .navigation__title {
+    padding: 0rem 0.75rem 0.375rem 0.75rem;
+  }
+
   .about-us__container-min {
     -ms-grid-columns: 40.554622% auto;
     grid-template-columns: 40.554622% auto;
@@ -1407,6 +1682,26 @@ h6 {
     height: 2.75rem;
   }
 
+  .course {
+    border-radius: 0.5rem;
+  }
+
+  .course__content {
+    gap: 0.625rem;
+  }
+
+  .course__content {
+    padding: 0.75rem;
+  }
+
+  .course__content {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+  }
+
+  .course__form {
+    padding-bottom: 0.625rem;
+  }
+
   .heading {
     background-color: rgba(28, 28, 28, 0.7);
     border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.25);
@@ -1427,6 +1722,10 @@ h6 {
   .colab__logos {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses__items {
+    gap: 0.75rem;
   }
 
   .about-us__container-min {
@@ -1624,6 +1923,54 @@ h6 {
     }
 }
 
+@supports (margin-bottom: clamp( 1.5rem , 1.3383838384rem  +  0.8080808081vw , 2rem )) {
+    .navigation:not(:last-child) {
+      margin-bottom: clamp( 1.5rem , 1.3383838384rem  +  0.8080808081vw , 2rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.5rem , 1.3383838384rem  +  0.8080808081vw , 2rem )) {
+    .navigation:not(:last-child) {
+      margin-bottom: calc(1.5rem + 0.5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.6691919192rem  +  0.404040404vw , 1rem )) {
+    .navigation__title {
+      font-size: clamp( 0.75rem , 0.6691919192rem  +  0.404040404vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6691919192rem  +  0.404040404vw , 1rem )) {
+    .navigation__title {
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9191919192rem  +  0.404040404vw , 1.25rem )) {
+    .course__title {
+      font-size: clamp( 1rem , 0.9191919192rem  +  0.404040404vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9191919192rem  +  0.404040404vw , 1.25rem )) {
+    .course__title {
+      font-size: calc(1rem + 0.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.0075757576rem  +  1.2121212121vw , 2rem )) {
+    .form-course__cost {
+      font-size: clamp( 1.25rem , 1.0075757576rem  +  1.2121212121vw , 2rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.0075757576rem  +  1.2121212121vw , 2rem )) {
+    .form-course__cost {
+      font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 61.875);
+    }
+}
+
 @supports (padding-top: clamp( 6.25rem , 4.3914141414rem  +  9.2929292929vw , 12rem )) {
     .advance {
       padding-top: clamp( 6.25rem , 4.3914141414rem  +  9.2929292929vw , 12rem );
@@ -1673,6 +2020,42 @@ h6 {
 }
 
 @supports (padding-top: clamp( 2.5rem , 1.2878787879rem  +  6.0606060606vw , 6.25rem )) {
+    .popular {
+      padding-top: clamp( 2.5rem , 1.2878787879rem  +  6.0606060606vw , 6.25rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , 1.2878787879rem  +  6.0606060606vw , 6.25rem )) {
+    .popular {
+      padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+    .popular__headed:not(:last-child) {
+      margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+    .popular__headed:not(:last-child) {
+      margin-bottom: calc(2rem + 2 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-top: clamp( 1.5rem , 1.0151515152rem  +  2.4242424242vw , 3rem )) {
+    .courses__view-more {
+      margin-top: clamp( 1.5rem , 1.0151515152rem  +  2.4242424242vw , 3rem );
+    }
+}
+
+@supports not (margin-top: clamp( 1.5rem , 1.0151515152rem  +  2.4242424242vw , 3rem )) {
+    .courses__view-more {
+      margin-top: calc(1.5rem + 1.5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 2.5rem , 1.2878787879rem  +  6.0606060606vw , 6.25rem )) {
     .about-us {
       padding-top: clamp( 2.5rem , 1.2878787879rem  +  6.0606060606vw , 6.25rem );
     }
@@ -1698,6 +2081,42 @@ h6 {
 }
 
 @media (min-width: 47.99875em) and (max-width: 81.875em) {
+@supports (gap: clamp( 0.625rem , -0.2605531161rem  +  1.8449503708vw , 1.25rem )) {
+    .course__content {
+      gap: clamp( 0.625rem , -0.2605531161rem  +  1.8449503708vw , 1.25rem );
+    }
+}
+
+@supports not (gap: clamp( 0.625rem , -0.2605531161rem  +  1.8449503708vw , 1.25rem )) {
+    .course__content {
+      gap: calc(0.625rem + 0.625 * (100vw - 47.99875rem) / 33.87625);
+    }
+}
+
+@supports (padding: clamp( 0.75rem , -0.3126637393rem  +  2.213940445vw , 1.5rem )) {
+    .course__content {
+      padding: clamp( 0.75rem , -0.3126637393rem  +  2.213940445vw , 1.5rem );
+    }
+}
+
+@supports not (padding: clamp( 0.75rem , -0.3126637393rem  +  2.213940445vw , 1.5rem )) {
+    .course__content {
+      padding: calc(0.75rem + 0.75 * (100vw - 47.99875rem) / 33.87625);
+    }
+}
+
+@supports (padding-bottom: clamp( 0.625rem , -0.2605531161rem  +  1.8449503708vw , 1.25rem )) {
+    .course__form {
+      padding-bottom: clamp( 0.625rem , -0.2605531161rem  +  1.8449503708vw , 1.25rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 0.625rem , -0.2605531161rem  +  1.8449503708vw , 1.25rem )) {
+    .course__form {
+      padding-bottom: calc(0.625rem + 0.625 * (100vw - 47.99875rem) / 33.87625);
+    }
+}
+
 @supports (gap: clamp( 1.25rem , -2.2922124645rem  +  7.3798014833vw , 3.75rem )) {
     .main-heading {
       gap: clamp( 1.25rem , -2.2922124645rem  +  7.3798014833vw , 3.75rem );
@@ -1731,6 +2150,18 @@ h6 {
 @supports not (gap: clamp( 0.5rem , -0.2084424929rem  +  1.4759602967vw , 1rem )) {
     .actions-heading {
       gap: calc(0.5rem + 0.5 * (100vw - 47.99875rem) / 33.87625);
+    }
+}
+
+@supports (gap: clamp( 0.75rem , -1.0211062322rem  +  3.6899007417vw , 2rem )) {
+    .courses__items {
+      gap: clamp( 0.75rem , -1.0211062322rem  +  3.6899007417vw , 2rem );
+    }
+}
+
+@supports not (gap: clamp( 0.75rem , -1.0211062322rem  +  3.6899007417vw , 2rem )) {
+    .courses__items {
+      gap: calc(0.75rem + 1.25 * (100vw - 47.99875rem) / 33.87625);
     }
 }
 
@@ -1785,6 +2216,10 @@ h6 {
 
   .search__button:hover {
     background-color: rgba(255, 199, 97, 0.5);
+  }
+
+  .course__title:hover {
+    text-decoration: underline;
   }
 
   .main-heading__item:hover .main-heading__option {
