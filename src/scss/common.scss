@@ -13,6 +13,17 @@
 ::selection {
 	background-color: rgba(#a60101, 0.5);
 }
+summary {
+	list-style: none;
+	&::marker {
+		display: none;
+	}
+}
+@supports (-webkit-appearance: none) {
+	summary::-webkit-details-marker {
+		display: none;
+	}
+}
 //========================================================================================================================================================
 // Search Input Big
 .search {
@@ -174,6 +185,12 @@
 		line-height: 135%;
 		@include adaptiveValue("font-size", 18, 12);
 	}
+
+	&--normal {
+		line-height: 150%;
+		color: $neutral40Color;
+		@include adaptiveValue("font-size", 16, 14);
+	}
 }
 //========================================================================================================================================================
 // Styles For Tab Navigation
@@ -325,6 +342,23 @@
 					right: toRem(-10);
 					background-color: $neutral40Color;
 				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Socials
+.socials {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 40, 15);
+	&__icon {
+		font-size: toRem(24);
+		color: $neutral10Color;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $warning100Color;
 			}
 		}
 	}

@@ -26,8 +26,8 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: $neutral10Color;
-				background-color: rgba($neutral100Color, 0.75);
-				border: toRem(1) solid rgba($neutral100Color, 0.75);
+				background-color: $neutral90Color;
+				border: toRem(1) solid $neutral80Color;
 			}
 		}
 	}
@@ -36,8 +36,18 @@
 		background-color: $primary100Color;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: rgba($warning100Color, 0.5);
-				border: toRem(1) solid rgba($primary100Color, 0.3);
+				background-color: #289380;
+			}
+		}
+	}
+
+	&--full-dark {
+		color: $neutral100Color;
+		background-color: $primary100Color;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $neutral10Color;
+				background-color: #289380;
 			}
 		}
 	}
