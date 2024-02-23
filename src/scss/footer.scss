@@ -6,7 +6,23 @@
 	background-color: $neutral100Color;
 	@include adaptiveValue("margin-top", 100, 40);
 	@include adaptiveValue("padding-top", 100, 40);
+	border-radius: toRem(24) toRem(24) toRem(0) toRem(0);
+	&::before {
+		content: "";
+		height: 100%;
+		top: toRem(-270);
+		left: toRem(-130);
+		width: toRem(1910);
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url("@img/landing-pages/decore.svg");
+	}
+	@media (max-width: $mobile) {
+		border-radius: toRem(16) toRem(16) toRem(0) toRem(0);
+	}
 	&__container-min {
+		position: relative;
 	}
 
 	&__headed {

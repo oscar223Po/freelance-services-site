@@ -1234,6 +1234,23 @@ summary::marker {
   overflow: hidden;
   position: relative;
   background-color: #1c1c1c;
+  border-radius: 1.5rem 1.5rem 0rem 0rem;
+}
+
+.footer::before {
+  content: "";
+  height: 100%;
+  top: -16.875rem;
+  left: -8.125rem;
+  width: 119.375rem;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/landing-pages/decore.svg");
+}
+
+.footer__container-min {
+  position: relative;
 }
 
 .footer__headed {
@@ -2442,6 +2459,10 @@ summary::marker {
 
   .actions-heading {
     gap: 0.5rem;
+  }
+
+  .footer {
+    border-radius: 1rem 1rem 0rem 0rem;
   }
 
   .logo-footer {
