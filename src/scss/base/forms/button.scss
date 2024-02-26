@@ -33,6 +33,7 @@
 	}
 
 	&--full {
+		color: $neutral10Color;
 		background-color: $primary100Color;
 		@media (any-hover: hover) {
 			&:hover {

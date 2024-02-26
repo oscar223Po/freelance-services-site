@@ -114,11 +114,9 @@ summary {
 	}
 	&--column {
 		display: grid;
-		row-gap: toRem(18);
+		@include adaptiveValue("row-gap", 18, 12);
 		@media (min-width: $mobile) {
-			align-items: end;
 			justify-content: space-between;
-			grid-template-columns: 48.739496% 46.05042%;
 		}
 	}
 

@@ -1,4 +1,6 @@
 //========================================================================================================================================================
+/* Home Page */
+//========================================================================================================================================================
 // Advance
 .advance {
 	position: relative;
@@ -101,6 +103,10 @@
 	&__headed {
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 64, 32);
+		}
+		@media (min-width: $mobile) {
+			align-items: end;
+			grid-template-columns: 48.739496% 46.05042%;
 		}
 	}
 
@@ -525,6 +531,200 @@
 	&__svg {
 		width: toRem(32);
 		height: toRem(32);
+	}
+
+	&__text {
+		color: $neutral70Color;
+	}
+}
+//========================================================================================================================================================
+/* Become Page */
+//========================================================================================================================================================
+// Earn
+.earn {
+	position: relative;
+	background-color: $neutral100Color;
+	@include adaptiveValue("padding-top", 192, 100);
+	@include adaptiveValue("padding-bottom", 100, 30);
+	&::before {
+		content: "";
+		height: 100%;
+		top: toRem(-261);
+		left: toRem(-80);
+		width: toRem(1200);
+		position: absolute;
+		transform: rotate(-25deg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url("@img/landing-pages/decore.svg");
+	}
+	&__container-min {
+		position: relative;
+	}
+
+	&__headed {
+		@media (min-width: $mobile) {
+			align-items: center;
+			grid-template-columns: 58.302521% 38.655462%;
+		}
+		.headed__text {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 32, 16);
+			}
+		}
+		.headed__title {
+			&:not(:last-child) {
+				margin-bottom: toRem(0);
+			}
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 78, 28);
+		}
+	}
+
+	&__status {
+	}
+}
+.status-earn {
+	display: grid;
+	grid-template-columns: auto auto;
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: $mobileSmall) {
+		grid-template-columns: auto;
+	}
+	&__image {
+		height: 100%;
+		overflow: hidden;
+		border-radius: toRem(16) toRem(0) toRem(0) toRem(16);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(1.05);
+		}
+		@media (max-width: $mobileSmall) {
+			border-radius: toRem(8) toRem(8) toRem(0) toRem(0);
+		}
+	}
+
+	&__content {
+		background-color: $neutral90Color;
+		border: toRem(1) solid $neutral70Color;
+		@include adaptiveValue("padding", 32, 16);
+		border-radius: toRem(0) toRem(16) toRem(16) toRem(0);
+		@media (max-width: $mobileSmall) {
+			border-radius: toRem(0) toRem(0) toRem(8) toRem(8);
+		}
+	}
+
+	&__label {
+		font-weight: 500;
+		line-height: 150%;
+		color: $neutral20Color;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+	}
+
+	&__items {
+	}
+
+	&__item {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid $neutral70Color;
+			@include adaptiveValue("margin-bottom", 32, 16);
+			@include adaptiveValue("padding-bottom", 32, 16);
+		}
+	}
+
+	&__main {
+		span {
+			display: flex;
+			font-weight: 500;
+			line-height: 120%;
+			color: $neutral20Color;
+			font-family: $fontFamilySecond;
+			@include adaptiveValue("font-size", 56, 28);
+			&:not(:last-child) {
+				margin-bottom: toRem(4);
+			}
+		}
+		h5 {
+			line-height: 150%;
+			color: $neutral40Color;
+			@include adaptiveValue("font-size", 16, 14);
+		}
+	}
+
+	&__percent {
+		gap: toRem(4);
+		display: flex;
+		font-weight: 600;
+		align-items: start;
+		padding-top: toRem(10);
+		color: $primary100Color;
+		flex-direction: row-reverse;
+		&::before {
+			font-size: toRem(20);
+			transform: translateY(toRem(-1.5));
+		}
+	}
+}
+//========================================================================================================================================================
+// Reason
+.reason {
+	@include adaptiveValue("padding-top", 100, 40);
+	&__container-min {
+	}
+
+	&__headed {
+		max-width: toRem(625);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 64, 32);
+		}
+	}
+
+	&__advantages {
+	}
+}
+.advantages-reason {
+	display: grid;
+	row-gap: toRem(24);
+	@include adaptiveValue("column-gap", 32, 16);
+	@media (min-width: $mobileSmall) {
+		grid-template-columns: repeat(auto-fit, minmax(toRem(350), 1fr));
+	}
+	&__item {
+		text-align: center;
+	}
+
+	&__svg {
+		width: toRem(40);
+		height: toRem(40);
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 120%;
+		color: $neutral90Color;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 24, 18);
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
 	}
 
 	&__text {
