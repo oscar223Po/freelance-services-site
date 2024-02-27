@@ -89,6 +89,8 @@
 	}
 
 	&__svg {
+		width: 100%;
+		max-height: toRem(40);
 		@include adaptiveValue("padding-left", 40, 5, 0, $containerWidth, 479.98);
 		@include adaptiveValue("padding-right", 40, 5, 0, $containerWidth, 479.98);
 	}
@@ -461,7 +463,7 @@
 	&__headed {
 		max-width: toRem(565);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 24);
+			@include adaptiveValue("margin-bottom", 64, 32);
 		}
 	}
 
@@ -728,6 +730,150 @@
 	}
 
 	&__text {
+		color: $neutral70Color;
+	}
+}
+//========================================================================================================================================================
+// Company
+.company {
+	overflow: hidden;
+	position: relative;
+	background-color: $neutral100Color;
+	@include adaptiveValue("margin-top", 100, 40);
+	@include adaptiveValue("padding-top", 70, 25);
+	@include adaptiveValue("padding-bottom", 70, 25);
+	&::before {
+		content: "";
+		top: toRem(-380);
+		left: toRem(-470);
+		width: toRem(2200);
+		position: absolute;
+		height: toRem(1000);
+		transform: rotate(-15deg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url("@img/landing-pages/decore.svg");
+	}
+	@media (max-width: $mobile) {
+		&::before {
+			top: toRem(-260);
+			width: toRem(1500);
+		}
+	}
+	&__container-min {
+		display: grid;
+		position: relative;
+		@include adaptiveValue("gap", 58, 22, 0, $containerWidth, 767.98);
+		@media (min-width: $mobileSmall) {
+			align-items: center;
+			grid-template-columns: 28.310924% auto;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		line-height: 120%;
+		color: $neutral10Color;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 24, 16);
+	}
+
+	&__icons {
+		display: grid;
+		row-gap: toRem(15);
+		align-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(130), 1fr));
+		@include adaptiveValue("column-gap", 70, 35, 0, $containerWidth, 767.98);
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__svg {
+		width: 100%;
+		max-height: toRem(40);
+	}
+}
+//========================================================================================================================================================
+// Begin
+.begin {
+	@include adaptiveValue("padding-top", 100, 40);
+	&__container-min {
+	}
+
+	&__headed {
+		align-items: end;
+		grid-template-columns: 57.563025% auto;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 64, 32, 0, $containerWidth, 767.98);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(24);
+			align-items: start;
+			justify-items: start;
+			grid-template-columns: auto;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: 46.956522% auto;
+		@include adaptiveValue("gap", 64, 24, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		border-radius: toRem(16);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: $mobileSmall) {
+			border-radius: toRem(8);
+		}
+	}
+
+	&__spollers {
+	}
+}
+.spollers-begin {
+	&__item {
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid $neutral40Color;
+			@include adaptiveValue("padding-bottom", 32, 16);
+		}
+		&:not(:first-child) {
+			@include adaptiveValue("padding-top", 32, 16);
+		}
+	}
+
+	&__title {
+		display: flex;
+		cursor: pointer;
+		font-weight: 500;
+		line-height: 120%;
+		align-items: center;
+		color: $neutral90Color;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 24, 16);
+		&._spoller-active {
+			&::before {
+				content: "\e92f";
+			}
+		}
+	}
+
+	&__body {
+		margin-top: toRem(8);
 		color: $neutral70Color;
 	}
 }

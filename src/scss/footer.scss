@@ -52,6 +52,8 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 	&__svg {
+		width: 100%;
+		max-height: toRem(40);
 		@include adaptiveValue("padding-left", 40, 5, 0, $containerWidth, 479.98);
 		@include adaptiveValue("padding-right", 40, 5, 0, $containerWidth, 479.98);
 	}
