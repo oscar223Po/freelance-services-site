@@ -47,7 +47,7 @@
 
 	&__headed {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 32);
+			@include adaptiveValue("margin-bottom", 64, 24);
 		}
 	}
 
@@ -104,7 +104,7 @@
 
 	&__headed {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 32);
+			@include adaptiveValue("margin-bottom", 64, 24);
 		}
 		@media (min-width: $mobile) {
 			align-items: end;
@@ -463,7 +463,7 @@
 	&__headed {
 		max-width: toRem(565);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 32);
+			@include adaptiveValue("margin-bottom", 64, 24);
 		}
 	}
 
@@ -687,7 +687,7 @@
 	&__headed {
 		max-width: toRem(625);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 32);
+			@include adaptiveValue("margin-bottom", 64, 24);
 		}
 	}
 
@@ -802,14 +802,13 @@
 	}
 
 	&__headed {
+		gap: toRem(18);
 		align-items: end;
 		grid-template-columns: 57.563025% auto;
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 32, 0, $containerWidth, 767.98);
+			@include adaptiveValue("margin-bottom", 64, 24, 0, $containerWidth, 767.98);
 		}
 		@media (max-width: $mobile) {
-			gap: toRem(24);
-			align-items: start;
 			justify-items: start;
 			grid-template-columns: auto;
 		}
@@ -818,10 +817,7 @@
 	&__body {
 		display: grid;
 		grid-template-columns: 46.956522% auto;
-		@include adaptiveValue("gap", 64, 24, 0, $containerWidth, 767.98);
-		@media (max-width: $mobile) {
-			grid-template-columns: repeat(2, 1fr);
-		}
+		@include adaptiveValue("gap", 64, 20, 0, $containerWidth, 767.98);
 		@media (max-width: $mobileSmall) {
 			grid-template-columns: auto;
 		}

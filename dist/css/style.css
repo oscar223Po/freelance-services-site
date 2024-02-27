@@ -1993,6 +1993,7 @@ summary::marker {
 }
 
 .begin__headed {
+  gap: 1.125rem;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
@@ -2723,7 +2724,7 @@ summary::marker {
   }
 
   .advance__headed:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .colab {
@@ -2735,7 +2736,7 @@ summary::marker {
   }
 
   .popular__headed:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .courses__view-more {
@@ -2795,7 +2796,7 @@ summary::marker {
   }
 
   .review__headed:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .review__slider.swiper:not(:last-child) {
@@ -2851,7 +2852,7 @@ summary::marker {
   }
 
   .reason__headed:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .advantages-reason {
@@ -3123,26 +3124,17 @@ summary::marker {
   }
 
   .begin__headed:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .begin__headed {
-    gap: 1.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
     justify-items: start;
     -ms-grid-columns: auto;
     grid-template-columns: auto;
   }
 
   .begin__body {
-    gap: 1.5rem;
-  }
-
-  .begin__body {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 
@@ -3635,15 +3627,15 @@ summary::marker {
     }
 }
 
-@supports (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .advance__headed:not(:last-child) {
-      margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem );
+      margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports not (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .advance__headed:not(:last-child) {
-      margin-bottom: calc(2rem + 2 * (100vw - 20rem) / 61.875);
+      margin-bottom: calc(1.5rem + 2.5 * (100vw - 20rem) / 61.875);
     }
 }
 
@@ -3671,15 +3663,15 @@ summary::marker {
     }
 }
 
-@supports (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .popular__headed:not(:last-child) {
-      margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem );
+      margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports not (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .popular__headed:not(:last-child) {
-      margin-bottom: calc(2rem + 2 * (100vw - 20rem) / 61.875);
+      margin-bottom: calc(1.5rem + 2.5 * (100vw - 20rem) / 61.875);
     }
 }
 
@@ -3851,15 +3843,15 @@ summary::marker {
     }
 }
 
-@supports (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .review__headed:not(:last-child) {
-      margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem );
+      margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports not (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .review__headed:not(:last-child) {
-      margin-bottom: calc(2rem + 2 * (100vw - 20rem) / 61.875);
+      margin-bottom: calc(1.5rem + 2.5 * (100vw - 20rem) / 61.875);
     }
 }
 
@@ -4019,15 +4011,15 @@ summary::marker {
     }
 }
 
-@supports (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .reason__headed:not(:last-child) {
-      margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem );
+      margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2rem , 1.3535353535rem  +  3.2323232323vw , 4rem )) {
+@supports not (margin-bottom: clamp( 1.5rem , 0.6919191919rem  +  4.0404040404vw , 4rem )) {
     .reason__headed:not(:last-child) {
-      margin-bottom: calc(2rem + 2 * (100vw - 20rem) / 61.875);
+      margin-bottom: calc(1.5rem + 2.5 * (100vw - 20rem) / 61.875);
     }
 }
 
@@ -4317,27 +4309,27 @@ summary::marker {
     }
 }
 
-@supports (margin-bottom: clamp( 2rem , -0.8337699716rem  +  5.9038411867vw , 4rem )) {
+@supports (margin-bottom: clamp( 1.5rem , -2.0422124645rem  +  7.3798014833vw , 4rem )) {
     .begin__headed:not(:last-child) {
-      margin-bottom: clamp( 2rem , -0.8337699716rem  +  5.9038411867vw , 4rem );
+      margin-bottom: clamp( 1.5rem , -2.0422124645rem  +  7.3798014833vw , 4rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2rem , -0.8337699716rem  +  5.9038411867vw , 4rem )) {
+@supports not (margin-bottom: clamp( 1.5rem , -2.0422124645rem  +  7.3798014833vw , 4rem )) {
     .begin__headed:not(:last-child) {
-      margin-bottom: calc(2rem + 2 * (100vw - 47.99875rem) / 33.87625);
+      margin-bottom: calc(1.5rem + 2.5 * (100vw - 47.99875rem) / 33.87625);
     }
 }
 
-@supports (gap: clamp( 1.5rem , -2.0422124645rem  +  7.3798014833vw , 4rem )) {
+@supports (gap: clamp( 1.25rem , -2.6464337109rem  +  8.1177816317vw , 4rem )) {
     .begin__body {
-      gap: clamp( 1.5rem , -2.0422124645rem  +  7.3798014833vw , 4rem );
+      gap: clamp( 1.25rem , -2.6464337109rem  +  8.1177816317vw , 4rem );
     }
 }
 
-@supports not (gap: clamp( 1.5rem , -2.0422124645rem  +  7.3798014833vw , 4rem )) {
+@supports not (gap: clamp( 1.25rem , -2.6464337109rem  +  8.1177816317vw , 4rem )) {
     .begin__body {
-      gap: calc(1.5rem + 2.5 * (100vw - 47.99875rem) / 33.87625);
+      gap: calc(1.25rem + 2.75 * (100vw - 47.99875rem) / 33.87625);
     }
 }
 }
