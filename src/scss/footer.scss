@@ -10,16 +10,21 @@
 	&::before {
 		content: "";
 		height: 100%;
+		right: toRem(0);
 		top: toRem(-270);
 		left: toRem(-130);
 		width: toRem(1910);
 		position: absolute;
+		margin: toRem(0) auto;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-image: url("@img/landing-pages/decore.svg");
 	}
 	@media (max-width: $mobile) {
 		border-radius: toRem(16) toRem(16) toRem(0) toRem(0);
+		&::before {
+			opacity: 0.7;
+		}
 	}
 	&__container-min {
 		position: relative;

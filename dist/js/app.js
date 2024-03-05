@@ -90,6 +90,41 @@
     let _slideToggle = (target, duration = 500) => {
         if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
     };
+    let bodyLockStatus = true;
+    let bodyUnlock = (delay = 500) => {
+        let body = document.querySelector("body");
+        if (bodyLockStatus) {
+            let lock_padding = document.querySelectorAll("[data-lp]");
+            setTimeout((() => {
+                for (let index = 0; index < lock_padding.length; index++) {
+                    const el = lock_padding[index];
+                    el.style.paddingRight = "0px";
+                }
+                body.style.paddingRight = "0px";
+                document.documentElement.classList.remove("lock");
+            }), delay);
+            bodyLockStatus = false;
+            setTimeout((function() {
+                bodyLockStatus = true;
+            }), delay);
+        }
+    };
+    let bodyLock = (delay = 500) => {
+        let body = document.querySelector("body");
+        if (bodyLockStatus) {
+            let lock_padding = document.querySelectorAll("[data-lp]");
+            for (let index = 0; index < lock_padding.length; index++) {
+                const el = lock_padding[index];
+                el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            }
+            body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            document.documentElement.classList.add("lock");
+            bodyLockStatus = false;
+            setTimeout((function() {
+                bodyLockStatus = true;
+            }), delay);
+        }
+    };
     function spollers() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
         if (spollersArray.length > 0) {
@@ -4127,7 +4162,7 @@
             modules: [ Autoplay ],
             observer: true,
             observeParents: true,
-            slidesPerView: 2,
+            slidesPerView: 4,
             spaceBetween: 32,
             initialSlide: 2,
             speed: 4e3,
@@ -4162,7 +4197,7 @@
             observeParents: true,
             slidesPerView: 2,
             spaceBetween: 32,
-            initialSlide: 2,
+            initialSlide: 4,
             speed: 4e3,
             loop: true,
             grabCursor: true,
@@ -4407,6 +4442,24 @@
                 initCourse(data, startItem, endItem);
                 e.preventDefault();
             }
+        }
+        const buttonResetCategory = document.querySelector(".aside-category__reset");
+        const checkboxCategory = document.querySelectorAll(".checkbox input");
+        if (buttonResetCategory !== null) buttonResetCategory.addEventListener("click", (() => {
+            for (let i = 0; i < checkboxCategory.length; i++) checkboxCategory[i].checked = false;
+        }));
+        const filterCategory = document.querySelector(".aside-category");
+        const filterCategoryButtonOpen = document.querySelector(".tabs-category__filter");
+        const filterCategoryButtonClose = document.querySelector(".aside-category__close");
+        if (filterCategory !== null) {
+            filterCategoryButtonOpen.addEventListener("click", (() => {
+                bodyLock();
+                filterCategory.style.display = "block";
+            }));
+            filterCategoryButtonClose.addEventListener("click", (() => {
+                bodyUnlock();
+                filterCategory.style.display = "none";
+            }));
         }
     }));
     window["FLS"] = false;

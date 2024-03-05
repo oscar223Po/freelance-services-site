@@ -61,6 +61,7 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+	// .select__input
 	&__input {
 		width: 100%;
 		background-color: transparent;
@@ -78,8 +79,8 @@
 		border-top: 0;
 		// border: 1px solid #d9d9d9;
 		box-shadow:
-		rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-		rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+			rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 		padding: 5px 0px;
 	}
 	// .select__scroll
@@ -163,6 +164,30 @@
 		}
 		.select__option {
 			padding: toRem(5) toRem(10);
+		}
+	}
+	// Select Sort
+	&_sort {
+		.select__title {
+			color: $neutral100Color !important;
+		}
+		.select__value {
+			font-weight: 600;
+			padding: toRem(0);
+			&::after {
+				font-weight: 700;
+			}
+		}
+		.select__options {
+			padding: toRem(0);
+		}
+		.select__option {
+			padding: toRem(5);
+		}
+		.select__content {
+			display: flex;
+			align-items: center;
+			height: toRem(30);
 		}
 	}
 }

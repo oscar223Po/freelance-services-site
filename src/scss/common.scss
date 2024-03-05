@@ -366,3 +366,211 @@ summary {
 	}
 }
 //========================================================================================================================================================
+// Styles For Articles
+.articles {
+	&__item {
+		display: grid;
+		align-items: center;
+		border-radius: toRem(16);
+		justify-content: space-between;
+		grid-template-columns: toRem(555) auto;
+		border: toRem(1) solid $neutral40Color;
+		@include adaptiveValue("padding", 16, 8, 0, $containerWidth, 767.98);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+		@media (max-width: $tablet) {
+			align-items: start;
+			grid-template-columns: toRem(320) auto;
+		}
+		@media (max-width: em(599.98)) {
+			gap: toRem(10);
+			border-radius: toRem(8);
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__main {
+		display: grid;
+		align-items: center;
+		grid-template-columns: toRem(190) auto;
+		@include adaptiveValue("gap", 24, 12, 0, $containerWidth, 767.98);
+		@media (max-width: $tablet) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__image {
+		display: flex;
+		overflow: hidden;
+		border-radius: toRem(8);
+		img {
+			width: 100%;
+			transform: scale(1.03);
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+
+	&__content {
+		height: 100%;
+		display: flex;
+		gap: toRem(12);
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 130%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 20, 18);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		gap: toRem(10);
+		line-height: 150%;
+		align-items: center;
+		color: $neutral70Color;
+	}
+
+	&__name {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		&::after {
+			content: "";
+			display: flex;
+			width: toRem(4);
+			height: toRem(4);
+			border-radius: 50%;
+			background-color: $neutral40Color;
+		}
+	}
+
+	&__review {
+		display: flex;
+		gap: toRem(4);
+		align-items: center;
+		&::before {
+			font-size: toRem(20);
+			color: $warning100Color;
+		}
+	}
+
+	&__labels {
+		column-gap: toRem(20);
+		justify-content: flex-start;
+	}
+
+	&__price {
+		@media (max-width: em(599.98)) {
+			text-align: right;
+		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Pagination
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("margin-top", 32, 16);
+	&__button {
+		display: flex;
+		width: toRem(48);
+		height: toRem(48);
+		align-items: center;
+		font-size: toRem(20);
+		color: $primary100Color;
+		justify-content: center;
+		transition:
+			background-color 0.15s ease 0s,
+			color 0.15s ease 0s;
+		border-radius: toRem(0) toRem(0) toRem(5) toRem(5);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $neutral10Color;
+				background-color: $primary100Color;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(38);
+			height: toRem(38);
+			font-size: toRem(16);
+		}
+		&--prew {
+			transform: rotate(90deg);
+		}
+
+		&--next {
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		width: toRem(48);
+		height: toRem(48);
+		position: relative;
+		align-items: center;
+		font-size: toRem(14);
+		color: $neutral90Color;
+		justify-content: center;
+		background-color: $neutral10Color;
+		transition: background-color 0.15s ease 0s;
+		&::before {
+			content: "";
+			left: toRem(0);
+			right: toRem(0);
+			width: toRem(0);
+			height: toRem(4);
+			bottom: toRem(0);
+			position: absolute;
+			margin: toRem(0) auto;
+			background-color: $primary100Color;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $neutral30Color;
+			}
+		}
+		&--active {
+			&::before {
+				width: toRem(16);
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(38);
+			height: toRem(38);
+			&--active {
+				&::before {
+					height: toRem(3);
+				}
+			}
+		}
+	}
+}
+//========================================================================================================================================================

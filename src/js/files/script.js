@@ -1,6 +1,6 @@
 // ~~~~~~~~[ JavaScript Files Connecting ]~~~~~~~
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile } from "./functions.js";
+import { bodyLock, bodyUnlock, isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 //--------------------------------------------------------------
@@ -90,6 +90,30 @@ document.addEventListener("DOMContentLoaded", function () {
 			initCourse(data, startItem, endItem);
 			e.preventDefault();
 		}
+	}
+	// ================[ JavaScript Section Category Reset ]================
+	const buttonResetCategory = document.querySelector(".aside-category__reset");
+	const checkboxCategory = document.querySelectorAll(".checkbox input");
+	if (buttonResetCategory !== null) {
+		buttonResetCategory.addEventListener("click", () => {
+			for (let i = 0; i < checkboxCategory.length; i++) {
+				checkboxCategory[i].checked = false;
+			}
+		})
+	}
+	// ================[ JavaScript Section Filter Open & Close ]================
+	const filterCategory = document.querySelector(".aside-category");
+	const filterCategoryButtonOpen = document.querySelector(".tabs-category__filter");
+	const filterCategoryButtonClose = document.querySelector(".aside-category__close");
+	if (filterCategory !== null) {
+		filterCategoryButtonOpen.addEventListener("click", () => {
+			bodyLock();
+			filterCategory.style.display = "block";
+		})
+		filterCategoryButtonClose.addEventListener("click", () => {
+			bodyUnlock();
+			filterCategory.style.display = "none";
+		})
 	}
 });
 //--------------------------------------------------------------
