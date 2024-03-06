@@ -1055,7 +1055,7 @@
 	&__container-min {
 		display: grid;
 		@include adaptiveValue("gap", 48, 24, 0, $containerWidth, 767.98);
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			align-items: start;
 			grid-template-columns: toRem(205) auto;
 		}
@@ -1069,18 +1069,21 @@
 	}
 }
 .aside-category {
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		z-index: 149;
-		display: none;
 		overflow: auto;
 		position: fixed;
 		padding: toRem(20) toRem(15);
 		background-color: $neutral10Color;
+		&--disabled {
+			display: none;
+		}
 	}
+
 	&__spollers {
 		display: grid;
 		@include adaptiveValue("gap", 40, 20);
@@ -1155,7 +1158,7 @@
 		border-radius: toRem(3);
 		padding: toRem(3) toRem(5);
 		background-color: $primary100Color;
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			display: none;
 		}
 	}
@@ -1207,7 +1210,7 @@
 		&::before {
 			font-size: toRem(20);
 		}
-		@media (min-width: $mobile) {
+		@media (min-width: $tablet) {
 			display: none;
 		}
 	}

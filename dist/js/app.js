@@ -4454,11 +4454,11 @@
         if (filterCategory !== null) {
             filterCategoryButtonOpen.addEventListener("click", (() => {
                 bodyLock();
-                filterCategory.style.display = "block";
+                filterCategory.classList.remove("aside-category--disabled");
             }));
             filterCategoryButtonClose.addEventListener("click", (() => {
                 bodyUnlock();
-                filterCategory.style.display = "none";
+                filterCategory.classList.add("aside-category--disabled");
             }));
         }
     }));

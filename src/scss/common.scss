@@ -370,22 +370,17 @@ summary {
 .articles {
 	&__item {
 		display: grid;
+		gap: toRem(15);
 		align-items: center;
 		border-radius: toRem(16);
 		justify-content: space-between;
-		grid-template-columns: toRem(555) auto;
+		grid-template-columns: auto auto;
 		border: toRem(1) solid $neutral40Color;
 		@include adaptiveValue("padding", 16, 8, 0, $containerWidth, 767.98);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 32, 16);
 		}
-		@media (max-width: $tablet) {
-			align-items: start;
-			grid-template-columns: toRem(320) auto;
-		}
 		@media (max-width: em(599.98)) {
-			gap: toRem(10);
-			border-radius: toRem(8);
 			grid-template-columns: 1fr;
 		}
 	}
@@ -395,17 +390,23 @@ summary {
 		align-items: center;
 		grid-template-columns: toRem(190) auto;
 		@include adaptiveValue("gap", 24, 12, 0, $containerWidth, 767.98);
-		@media (max-width: $tablet) {
-			grid-template-columns: auto;
+		@media (max-width: $mobile) {
+			grid-template-columns: toRem(150) auto;
+		}
+		@media (max-width: em(599.98)) {
+			grid-template-columns: 1fr;
 		}
 	}
 
 	&__image {
+		height: 100%;
 		display: flex;
 		overflow: hidden;
 		border-radius: toRem(8);
 		img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			transform: scale(1.03);
 			transition: transform 0.3s ease 0s;
 		}
@@ -477,7 +478,11 @@ summary {
 
 	&__price {
 		@media (max-width: em(599.98)) {
-			text-align: right;
+			padding: toRem(3);
+			text-align: center;
+			color: $neutral10Color;
+			border-radius: toRem(10);
+			background-color: $primary100Color;
 		}
 	}
 }
