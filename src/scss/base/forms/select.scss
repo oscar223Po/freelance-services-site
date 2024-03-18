@@ -190,6 +190,84 @@
 			height: toRem(30);
 		}
 	}
+	// Select Account
+	&_account {
+		.select__title {
+			background-color: transparent;
+		}
+		.select__scroll {
+			display: grid;
+			gap: toRem(5);
+		}
+		.select__options {
+			box-shadow: none;
+			padding: toRem(5) toRem(0);
+			top: calc(115% - toRem(1));
+			background-color: transparent;
+			&::before {
+				content: "";
+				height: 100%;
+				top: toRem(0);
+				left: toRem(-5);
+				right: toRem(0);
+				width: toRem(66);
+				bottom: toRem(0);
+				position: absolute;
+				border-radius: toRem(5);
+				background-color: #2d2c2c;
+				box-shadow: rgba(0, 0, 0, 0.16) toRem(0) toRem(1) toRem(4);
+			}
+			@media (min-width: $mobile) {
+				max-width: toRem(56);
+				min-width: toRem(56);
+			}
+			@media (max-width: $mobile) {
+				&::before {
+					width: toRem(55);
+				}
+			}
+		}
+		.select__option {
+			padding: toRem(0);
+			text-align: center;
+			background-color: transparent;
+			transition: opacity 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+			@media (min-width: $mobile) {
+				width: toRem(56);
+			}
+		}
+		.select__value {
+			height: auto;
+			padding: toRem(0);
+			&::after {
+				font-weight: 600;
+				font-size: toRem(20);
+			}
+			@media (max-width: $mobile) {
+				gap: toRem(0);
+				&::after {
+					display: none;
+				}
+			}
+		}
+		.select__asset {
+			width: toRem(56);
+			overflow: hidden;
+			border-radius: 50%;
+			img {
+				max-width: 100%;
+				transform: scale(1.03);
+			}
+			@media (max-width: $mobile) {
+				width: toRem(45);
+			}
+		}
+	}
 }
 //========================================================================================================================================================
 // Тег

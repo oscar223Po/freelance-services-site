@@ -91,6 +91,9 @@
         if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
     };
     let bodyLockStatus = true;
+    let bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+    };
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
         if (bodyLockStatus) {
@@ -325,6 +328,14 @@
                 e.preventDefault();
             }
         }
+    }
+    function menuInit() {
+        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                bodyLockToggle();
+                document.documentElement.classList.toggle("menu-open");
+            }
+        }));
     }
     function functions_FLS(message) {
         setTimeout((() => {
@@ -4464,6 +4475,7 @@
     }));
     window["FLS"] = false;
     isWebp();
+    menuInit();
     spollers();
     tabs();
     digitsCounter();
