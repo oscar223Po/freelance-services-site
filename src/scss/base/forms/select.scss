@@ -40,6 +40,9 @@
 				transform: rotate(-180deg);
 			}
 		}
+		&::before {
+			@extend %ic;
+		}
 		&._select-pseudo-label {
 			&::before {
 				content: attr(data-pseudo-label);
@@ -103,6 +106,9 @@
 		cursor: pointer;
 		padding: 5px 15px;
 		color: inherit;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
 		&._select-selected {
 			background-color: #eee;
 		}
@@ -265,6 +271,55 @@
 			}
 			@media (max-width: $mobile) {
 				width: toRem(45);
+			}
+		}
+	}
+	// Select Period
+	&_period {
+		&._select-open {
+			.select__title {
+				border-radius: toRem(10) toRem(10) toRem(0) toRem(0);
+			}
+		}
+		.select__title {
+			font-weight: 600;
+			line-height: 150%;
+			color: $primary100Color;
+			border-radius: toRem(100);
+			background-color: $neutral90Color;
+			border: toRem(1) solid $primary100Color;
+			transition: border-radius 0.2s ease 0s;
+		}
+		.select__value {
+			height: toRem(55);
+			padding: toRem(0) toRem(25);
+			&::before {
+				content: "\e910";
+				font-size: toRem(20);
+				margin-top: toRem(1.5);
+			}
+			&::after {
+				font-weight: 600;
+				font-size: toRem(20);
+				margin-top: toRem(3);
+			}
+			@media (max-width: $mobile) {
+				height: toRem(40);
+				padding: toRem(0) toRem(15);
+			}
+		}
+		.select__options {
+			background-color: $neutral100Color;
+			border: toRem(1) solid $primary100Color;
+			border-radius: toRem(0) toRem(0) toRem(10) toRem(10);
+		}
+		.select__option {
+			color: $primary100Color;
+			padding: toRem(8) toRem(15);
+			@media (any-hover: hover) {
+				&:hover {
+					color: $neutral10Color;
+				}
 			}
 		}
 	}

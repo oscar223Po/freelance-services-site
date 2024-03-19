@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240318193023">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240319223737">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
 	<div class="wrapper">
 		<!-- Header -->
 		<header class="header">
-			<div class="header__container-min">
+			<div class="header__container">
 				<div class="header__main main-header">
 					<a href="" class="main-header__logo _icon-logo"><span>O&Lance</span></a>
 					<div class="main-header__menu menu">
@@ -76,10 +76,188 @@
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<main class="page">
 			<!-- [Dashboard] -->
-			<section class="dashboard"></section>
+			<section class="dashboard">
+				<div class="dashboard__container">
+					<div class="dashboard__top top-dashboard">
+						<div class="top-dashboard__headed headed headed--white">
+							<h3 class="headed__title title">Welcome back, Giovani</h3>
+							<div class="headed__text text text--large">
+								<p>Here's an overview of your study progress this week.</p>
+							</div>
+						</div>
+						<div class="top-dashboard__select">
+							<select name="form[]" data-class-modif="period">
+								<option value="1" selected>Daily</option>
+								<option value="2">Weekly</option>
+								<option value="3">Months</option>
+								<option value="4">Years</option>
+							</select>
+						</div>
+					</div>
+					<div class="dashboard__overview overview-dashboard">
+						<div class="overview-dashboard__item">
+							<div class="overview-dashboard__icon overview-dashboard__icon--01">
+								<svg viewBox="0 0 32 33" fill="none">
+									<path opacity="0.2" d="M25 28.5C26.6569 28.5 28 27.1569 28 25.5C28 23.8431 26.6569 22.5 25 22.5C23.3431 22.5 22 23.8431 22 25.5C22 27.1569 23.3431 28.5 25 28.5Z" fill="#1C1C1C" />
+									<path d="M25 28.5C26.6569 28.5 28 27.1569 28 25.5C28 23.8431 26.6569 22.5 25 22.5C23.3431 22.5 22 23.8431 22 25.5C22 27.1569 23.3431 28.5 25 28.5Z" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M9 7.5H21C22.0609 7.5 23.0783 7.92143 23.8284 8.67157C24.5786 9.42172 25 10.4391 25 11.5C25 12.5609 24.5786 13.5783 23.8284 14.3284C23.0783 15.0786 22.0609 15.5 21 15.5H9C7.67392 15.5 6.40215 16.0268 5.46447 16.9645C4.52678 17.9021 4 19.1739 4 20.5C4 21.8261 4.52678 23.0979 5.46447 24.0355C6.40215 24.9732 7.67392 25.5 9 25.5H22" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+							<div class="overview-dashboard__content">
+								<div class="overview-dashboard__title">4 Courses</div>
+								<div class="overview-dashboard__period">In Progress</div>
+							</div>
+						</div>
+						<div class="overview-dashboard__item">
+							<div class="overview-dashboard__icon overview-dashboard__icon--02">
+								<svg viewBox="0 0 32 33" fill="none">
+									<path opacity="0.2" d="M5.5 6V25L7.5 27H26.5V6H5.5Z" fill="#1C1C1C" />
+									<path d="M5.5 18.4125V7C5.5 6.73478 5.60536 6.48043 5.79289 6.29289C5.98043 6.10536 6.23478 6 6.5 6H25.5C25.7652 6 26.0196 6.10536 26.2071 6.29289C26.3946 6.48043 26.5 6.73478 26.5 7V26C26.5 26.2652 26.3946 26.5196 26.2071 26.7071C26.0196 26.8946 25.7652 27 25.5 27H16.95" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M16 19.5L8 27.5L4 23.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+							<div class="overview-dashboard__content">
+								<div class="overview-dashboard__title">12 Courses</div>
+								<div class="overview-dashboard__period">Completed</div>
+							</div>
+						</div>
+						<div class="overview-dashboard__item">
+							<div class="overview-dashboard__icon overview-dashboard__icon--03">
+								<svg viewBox="0 0 32 33" fill="none">
+									<path opacity="0.2" d="M16 18.5C19.3137 18.5 22 15.8137 22 12.5C22 9.18629 19.3137 6.5 16 6.5C12.6863 6.5 10 9.18629 10 12.5C10 15.8137 12.6863 18.5 16 18.5Z" fill="#1C1C1C" />
+									<path d="M16 22.5C21.5228 22.5 26 18.0228 26 12.5C26 6.97715 21.5228 2.5 16 2.5C10.4772 2.5 6 6.97715 6 12.5C6 18.0228 10.4772 22.5 16 22.5Z" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M16 18.5C19.3137 18.5 22 15.8137 22 12.5C22 9.18629 19.3137 6.5 16 6.5C12.6863 6.5 10 9.18629 10 12.5C10 15.8137 12.6863 18.5 16 18.5Z" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M22 20.5V30.5L16 27.5L10 30.5V20.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+							<div class="overview-dashboard__content">
+								<div class="overview-dashboard__title">8 Challenges</div>
+								<div class="overview-dashboard__period">Completed</div>
+							</div>
+						</div>
+						<div class="overview-dashboard__item">
+							<div class="overview-dashboard__icon overview-dashboard__icon--04">
+								<svg viewBox="0 0 32 33" fill="none">
+									<path opacity="0.2" d="M16 28.5C22.6274 28.5 28 23.1274 28 16.5C28 9.87258 22.6274 4.5 16 4.5C9.37258 4.5 4 9.87258 4 16.5C4 23.1274 9.37258 28.5 16 28.5Z" fill="#1C1C1C" />
+									<path d="M16 28.5C22.6274 28.5 28 23.1274 28 16.5C28 9.87258 22.6274 4.5 16 4.5C9.37258 4.5 4 9.87258 4 16.5C4 23.1274 9.37258 28.5 16 28.5Z" stroke="#1C1C1C" stroke-width="1.5" stroke-miterlimit="10" />
+									<path d="M16 9.5V16.5H23" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+							<div class="overview-dashboard__content">
+								<div class="overview-dashboard__title">13h 10m</div>
+								<div class="overview-dashboard__period">Time Spent</div>
+							</div>
+						</div>
+					</div>
+					<div class="dashboard__content content-dashboard">
+						<div class="content-dashboard__spent spent-content-dashboard">
+							<div class="spent-content-dashboard__top">
+								<h3 class="spent-content-dashboard__title title title--normal">Spent Hours</h3>
+								<div class="spent-content-dashboard__types">
+									<div class="spent-content-dashboard__type">Learning</div>
+									<div class="spent-content-dashboard__type">Challenge</div>
+								</div>
+							</div>
+							<div class="spent-content-dashboard__body">
+								<div class="spent-content-dashboard__hours">
+									<div class="spent-content-dashboard__hour">14h</div>
+									<div class="spent-content-dashboard__hour">12h</div>
+									<div class="spent-content-dashboard__hour">10h</div>
+									<div class="spent-content-dashboard__hour">6h</div>
+									<div class="spent-content-dashboard__hour">4h</div>
+									<div class="spent-content-dashboard__hour">2h</div>
+									<div class="spent-content-dashboard__hour">0h</div>
+								</div>
+								<div class="spent-content-dashboard__items">
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="286" viewBox="0 0 28 286" fill="none">
+											<rect x="0.5" y="0.5" width="11" height="285" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" y="127" width="12" height="159" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">S</div>
+									</div>
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="238" viewBox="0 0 28 238" fill="none">
+											<rect x="0.5" y="0.5" width="11" height="237" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" y="113" width="12" height="125" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">M</div>
+									</div>
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="258" viewBox="0 0 28 258" fill="none">
+											<rect x="0.5" y="102.5" width="11" height="155" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" width="12" height="258" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">T</div>
+									</div>
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="338" viewBox="0 0 28 338" fill="none">
+											<rect x="0.5" y="0.5" width="11" height="337" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" y="219" width="12" height="119" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">W</div>
+									</div>
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="286" viewBox="0 0 28 286" fill="none">
+											<rect x="0.5" y="0.5" width="11" height="285" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" y="110" width="12" height="176" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">T</div>
+									</div>
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="238" viewBox="0 0 28 238" fill="none">
+											<rect x="0.5" y="0.5" width="11" height="237" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" y="92" width="12" height="146" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">F</div>
+									</div>
+									<div class="spent-content-dashboard__item">
+										<svg width="28" height="272" viewBox="0 0 28 272" fill="none">
+											<rect x="0.5" y="101.5" width="11" height="170" rx="5.5" fill="#32BCA3" stroke="#32BCA3" />
+											<rect x="16" width="12" height="272" rx="6" fill="#FFC761" />
+										</svg>
+										<div class="spent-content-dashboard__day">S</div>
+									</div>
+								</div>
+								<div class="spent-content-dashboard__blocks">
+									<div class="spent-content-dashboard__block">
+										<div class="spent-content-dashboard__rate">
+											<div class="spent-content-dashboard__rate-number title title--normal">140</div>
+											<div class="spent-content-dashboard__rate-persent spent-content-dashboard__rate-persent--up _icon-line-up">16%</div>
+										</div>
+										<div class="spent-content-dashboard__text">Total hours in a week</div>
+									</div>
+									<div class="spent-content-dashboard__block">
+										<div class="spent-content-dashboard__rate">
+											<div class="spent-content-dashboard__rate-number title title--normal">12</div>
+											<div class="spent-content-dashboard__rate-persent spent-content-dashboard__rate-persent--dw _icon-line-dw">2%</div>
+										</div>
+										<div class="spent-content-dashboard__text">Average hours in a day</div>
+									</div>
+									<div class="spent-content-dashboard__block">
+										<div class="spent-content-dashboard__rate">
+											<div class="spent-content-dashboard__rate-number title title--normal">80</div>
+											<div class="spent-content-dashboard__rate-persent spent-content-dashboard__rate-persent--up _icon-line-up">16%</div>
+										</div>
+										<div class="spent-content-dashboard__text">Course hours in a week</div>
+									</div>
+									<div class="spent-content-dashboard__block">
+										<div class="spent-content-dashboard__rate">
+											<div class="spent-content-dashboard__rate-number title title--normal">40</div>
+											<div class="spent-content-dashboard__rate-persent spent-content-dashboard__rate-persent--dw _icon-line-dw">4%</div>
+										</div>
+										<div class="spent-content-dashboard__text">Challenge hours in a week</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="content-dashboard__resent resent-content-dashboard"></div>
+					</div>
+				</div>
+			</section>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20240318193023"></script>
+	<script src="js/app.min.js?_v=20240319223737"></script>
 </body>
 
 </html>

@@ -7,14 +7,16 @@ import { flsModules } from "./modules.js";
 document.addEventListener("DOMContentLoaded", function () {
 	// ================[ JavaScript Section Heading Scroll ]================
 	var headingScroll = document.querySelector(".heading");
-	window.addEventListener("scroll", function () {
-		var scrollPosition = window.scrollY;
-		if (scrollPosition > 1) {
-			headingScroll.classList.add("_heading-scroll");
-		} else {
-			headingScroll.classList.remove("_heading-scroll");
-		}
-	});
+	if (headingScroll !== null) {
+		window.addEventListener("scroll", function () {
+			var scrollPosition = window.scrollY;
+			if (scrollPosition > 1) {
+				headingScroll.classList.add("_heading-scroll");
+			} else {
+				headingScroll.classList.remove("_heading-scroll");
+			}
+		});
+	}
 	// ================[ JavaScript Section ]================
 	const courseItems = document.querySelector(".courses__items");
 	let data;

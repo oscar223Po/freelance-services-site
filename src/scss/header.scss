@@ -3,12 +3,13 @@
 .header {
 	top: 0;
 	left: 0;
+	z-index: 10;
 	width: 100%;
 	position: fixed;
 	color: $neutral10Color;
 	background-color: $neutral100Color;
 	border-bottom: toRem(1) solid $neutral80Color;
-	&__container-min {
+	&__container {
 		display: flex;
 		align-items: center;
 		min-height: toRem(96);
@@ -259,15 +260,15 @@
 			content: "";
 			@extend %ic;
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: $primary100Color;
-				&::after {
-					width: 100%;
+		@media (min-width: $mobile) {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $primary100Color;
+					&::after {
+						width: 100%;
+					}
 				}
 			}
-		}
-		@media (min-width: $mobile) {
 			&::after {
 				width: 0;
 				left: toRem(0);
@@ -317,6 +318,9 @@
 		box-shadow:
 			rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
 			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 
 	&__list-opt {
@@ -367,6 +371,7 @@
 
 	&__list {
 		opacity: 0;
+		z-index: 3;
 		top: toRem(35);
 		left: toRem(0);
 		visibility: hidden;

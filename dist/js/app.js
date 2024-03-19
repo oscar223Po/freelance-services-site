@@ -4392,7 +4392,7 @@
     }), 0);
     document.addEventListener("DOMContentLoaded", (function() {
         var headingScroll = document.querySelector(".heading");
-        window.addEventListener("scroll", (function() {
+        if (headingScroll !== null) window.addEventListener("scroll", (function() {
             var scrollPosition = window.scrollY;
             if (scrollPosition > 1) headingScroll.classList.add("_heading-scroll"); else headingScroll.classList.remove("_heading-scroll");
         }));
