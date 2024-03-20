@@ -25,6 +25,13 @@ summary {
 	}
 }
 //========================================================================================================================================================
+// Styles For Page
+.page {
+	&--padding-bottom {
+		@include adaptiveValue("padding-bottom", 55, 30);
+	}
+}
+//========================================================================================================================================================
 // Search Input Big
 .search {
 	position: relative;
@@ -192,6 +199,35 @@ summary {
 	&--normal {
 		line-height: 150%;
 		@include adaptiveValue("font-size", 16, 14);
+	}
+}
+//========================================================================================================================================================
+// Styles For Top Title & Link
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__title {
+	}
+
+	&__link {
+		display: flex;
+		gap: toRem(8);
+		font-weight: 600;
+		line-height: 150%;
+		align-items: center;
+		color: $primary100Color;
+		flex-direction: row-reverse;
+		transition: color 0.3s ease 0s;
+		&::before {
+			font-weight: 600;
+			font-size: toRem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $info100Color;
+			}
+		}
 	}
 }
 //========================================================================================================================================================
