@@ -3,18 +3,6 @@
 //========================================================================================================================================================
 // Dashboard
 .dashboard {
-	background-color: $neutral100Color;
-	@include adaptiveValue("padding-top", 150, 100);
-	@include adaptiveValue("padding-bottom", 55, 30);
-	::-webkit-scrollbar {
-		height: toRem(3);
-		border-radius: toRem(10);
-		background-color: $neutral80Color;
-	}
-	::-webkit-scrollbar-thumb {
-		border-radius: toRem(10);
-		background-color: $warning100Color;
-	}
 	&__container {
 	}
 
@@ -254,6 +242,7 @@
 
 	&__body {
 		border-radius: toRem(16);
+		background-color: $neutral10Color;
 		border: toRem(1) solid $neutral40Color;
 		@include adaptiveValue("padding", 24, 12, 0, $containerWidth, 767.98);
 		@media (max-width: $mobileSmall) {
@@ -415,6 +404,251 @@
 			height: toRem(35);
 			min-width: toRem(35);
 		}
+	}
+}
+//========================================================================================================================================================
+/* Browsw Page */
+//========================================================================================================================================================
+// Examine
+.examine {
+	&__container {
+	}
+
+	&__main {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 24);
+		}
+	}
+
+	&__category {
+	}
+}
+.main-examine {
+	&__headed {
+		max-width: toRem(850);
+		.headed__title {
+			color: $neutral20Color;
+			@include adaptiveValue("font-size", 40, 25);
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 24);
+		}
+	}
+
+	&__search {
+	}
+}
+.category-examine {
+	&__title {
+		color: $neutral20Color;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+	}
+
+	&__items {
+		@include adaptiveValue("gap", 32, 14, 0, $containerWidth, 767.98);
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(toRem(250), 1fr));
+		}
+		@media (max-width: $tablet) {
+			display: flex;
+			overflow-x: auto;
+			white-space: nowrap;
+			border-radius: toRem(5);
+			padding-bottom: toRem(10);
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		border-radius: toRem(16);
+		background-color: $neutral90Color;
+		@include adaptiveValue("gap", 24, 12);
+		border: toRem(1) solid $neutral80Color;
+		@include adaptiveValue("padding", 24, 12);
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $primary100Color;
+				.category-examine__text {
+					color: $neutral10Color;
+				}
+			}
+		}
+	}
+
+	&__svg {
+		width: toRem(32);
+		height: toRem(32);
+	}
+
+	&__text {
+		font-weight: 500;
+		line-height: 135%;
+		font-size: toRem(18);
+		color: $neutral20Color;
+		transition: color 0.3s ease 0s;
+	}
+}
+//========================================================================================================================================================
+// Recomend
+.recomend {
+	@include adaptiveValue("padding-top", 55, 25);
+	&__container {
+	}
+
+	&__top {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+	}
+
+	&__articles {
+	}
+}
+//========================================================================================================================================================
+// Events
+.events {
+	@include adaptiveValue("padding-top", 55, 25);
+	&__container {
+	}
+
+	&__top {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+	}
+
+	&__slider {
+		border-radius: toRem(8);
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+}
+.slide-events {
+	overflow: hidden;
+	border-radius: toRem(16);
+	background-color: $neutral10Color;
+	@media (max-width: $mobile) {
+		border-radius: toRem(8);
+	}
+	&__image {
+		img {
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__content {
+		border-left: toRem(1) solid $neutral40Color;
+		border-right: toRem(1) solid $neutral40Color;
+		border-bottom: toRem(1) solid $neutral40Color;
+		border-radius: toRem(0) toRem(0) toRem(16) toRem(16);
+		@include adaptiveValue("padding", 24, 12, 0, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			border-radius: toRem(0) toRem(0) toRem(8) toRem(8);
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 135%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 18, 14);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 12, 0, $containerWidth, 767.98);
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		gap: toRem(5);
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__author {
+		color: $neutral70Color;
+		h5 {
+			line-height: 150%;
+			font-size: toRem(16);
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+			@media (max-width: $mobile) {
+				&:not(:last-child) {
+					margin-bottom: toRem(4);
+				}
+			}
+		}
+		span {
+			display: flex;
+			gap: toRem(4);
+			line-height: 155%;
+			align-items: center;
+			font-size: toRem(14);
+			&::before {
+				font-weight: 600;
+				font-size: toRem(20);
+				color: $neutral100Color;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			h5 {
+				font-size: toRem(14);
+			}
+			span {
+				font-size: toRem(12);
+				&::before {
+					font-size: toRem(18);
+				}
+			}
+		}
+	}
+
+	&__cost {
+	}
+}
+//========================================================================================================================================================
+// Authors
+.authors {
+	@include adaptiveValue("padding-top", 55, 25);
+	&__container {
+	}
+
+	&__top {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+	}
+
+	&__items {
+		display: grid;
+		@include adaptiveValue("gap", 32, 14, 0, $containerWidth, 767.98);
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(auto-fit, minmax(toRem(200), 1fr));
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {
+		border-radius: toRem(16);
+		background-color: $neutral10Color;
+		border: toRem(1) solid $neutral40Color;
 	}
 }
 //========================================================================================================================================================

@@ -277,6 +277,88 @@ function initSliders() {
 		});
 	}
 	// ========================================================================================================================================================
+	// Trust Spoller
+	if (document.querySelector('.slider-events')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.slider-events', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 32,
+			autoHeight: false,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагінація
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			/*
+			navigation: {
+				prevEl: '.slider-trust__arrow--prev',
+				nextEl: '.slider-trust__arrow--next',
+			},
+			*/
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				767: {
+					slidesPerView: 2.5,
+					spaceBetween: 15,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 15,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 32,
+				},
+			},
+			// Події
+			on: {
+
+			}
+		});
+	}
+	// ========================================================================================================================================================
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

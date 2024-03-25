@@ -57,14 +57,6 @@
 	}
 
 	&__search {
-		&:not(:last-child) {
-			margin-bottom: toRem(16);
-		}
-	}
-
-	&__tip {
-		line-height: 150%;
-		color: $neutral40Color;
 	}
 }
 //========================================================================================================================================================
@@ -204,85 +196,9 @@
 	}
 
 	&__item {
-	}
-}
-.item-author {
-	display: flex;
-	gap: toRem(16);
-	text-align: center;
-	align-items: center;
-	flex-direction: column;
-	@include adaptiveValue("padding-top", 48, 24);
-	@include adaptiveValue("padding-bottom", 48, 24);
-	&:not(:last-child, :nth-child(5)) {
-		border-bottom: toRem(1) solid $neutral80Color;
-	}
-	&__image {
-		overflow: hidden;
-		border-radius: 50%;
-		img {
-			max-width: 100%;
-			transform: scale(1.05);
+		&:not(:last-child, :nth-child(5)) {
+			border-bottom: toRem(1) solid $neutral80Color;
 		}
-	}
-
-	&__main {
-	}
-
-	&__name {
-		font-weight: 500;
-		line-height: 130%;
-		color: $neutral10Color;
-		@include adaptiveValue("font-size", 20, 16);
-		&:not(:last-child) {
-			margin-bottom: toRem(4);
-		}
-	}
-
-	&__courses {
-		line-height: 155%;
-		font-size: toRem(14);
-		color: $neutral40Color;
-	}
-
-	&__cost {
-		font-weight: 500;
-		line-height: 120%;
-		color: $neutral20Color;
-		font-family: $fontFamilySecond;
-		@include adaptiveValue("font-size", 32, 20);
-		span {
-			line-height: 150%;
-			font-size: toRem(16);
-		}
-	}
-
-	&__doing {
-		display: flex;
-		gap: toRem(8);
-		align-items: center;
-		justify-content: center;
-		color: $primary100Color;
-		border-radius: toRem(30);
-		padding: toRem(5) toRem(12);
-		border: toRem(1) solid $primary100Color;
-		@media (max-width: $mobileSmall) {
-			gap: toRem(4);
-			padding: toRem(7);
-			flex-direction: column;
-			border-radius: toRem(10);
-			span {
-				display: none;
-			}
-		}
-	}
-
-	&__svg {
-		display: flex;
-		width: toRem(20);
-		height: toRem(20);
-		align-items: center;
-		justify-content: center;
 	}
 }
 //========================================================================================================================================================
@@ -1038,14 +954,6 @@
 	}
 
 	&__search {
-		&:not(:last-child) {
-			margin-bottom: toRem(16);
-		}
-	}
-
-	&__tip {
-		line-height: 150%;
-		color: $neutral40Color;
 	}
 }
 //========================================================================================================================================================

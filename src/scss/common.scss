@@ -34,7 +34,13 @@ summary {
 //========================================================================================================================================================
 // Search Input Big
 .search {
-	position: relative;
+	&__main {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
 	&__input {
 		width: 100%;
 		outline: none;
@@ -101,6 +107,11 @@ summary {
 			width: toRem(44);
 			height: toRem(44);
 		}
+	}
+
+	&__tip {
+		line-height: 150%;
+		color: $neutral40Color;
 	}
 }
 //========================================================================================================================================================
@@ -411,6 +422,7 @@ summary {
 		border-radius: toRem(16);
 		justify-content: space-between;
 		grid-template-columns: auto auto;
+		background-color: $neutral10Color;
 		border: toRem(1) solid $neutral40Color;
 		@include adaptiveValue("padding", 16, 8, 0, $containerWidth, 767.98);
 		&:not(:last-child) {
@@ -611,6 +623,136 @@ summary {
 				}
 			}
 		}
+	}
+}
+//========================================================================================================================================================
+// Styles For Bander
+.bander {
+	background-color: $neutral100Color;
+	@include adaptiveValue("padding-top", 150, 100);
+	@include adaptiveValue("padding-bottom", 55, 30);
+	::-webkit-scrollbar {
+		height: toRem(3);
+		border-radius: toRem(10);
+		background-color: $neutral80Color;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: toRem(10);
+		background-color: $warning100Color;
+	}
+}
+//========================================================================================================================================================
+// Styles For Developer
+.developer {
+	width: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	@include adaptiveValue("padding-top", 48, 24);
+	@include adaptiveValue("padding-bottom", 48, 24);
+	&--white {
+		.developer__name {
+			color: $neutral10Color;
+		}
+		.developer__count {
+			color: $neutral40Color;
+		}
+		.developer__hours {
+			color: $neutral20Color;
+		}
+	}
+	&__main {
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__icon {
+		display: flex;
+		overflow: hidden;
+		width: toRem(100);
+		height: toRem(100);
+		border-radius: 50%;
+		margin: toRem(0) auto;
+		justify-content: center;
+		img {
+			max-width: 100%;
+			transform: scale(1.05);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(90);
+			height: toRem(90);
+		}
+	}
+
+	&__name {
+		font-weight: 500;
+		line-height: 130%;
+		color: $neutral90Color;
+		@include adaptiveValue("font-size", 20, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(4);
+		}
+	}
+
+	&__count {
+		line-height: 155%;
+		font-size: toRem(14);
+		color: $neutral70Color;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__hours {
+		font-weight: 500;
+		line-height: 120%;
+		color: $neutral90Color;
+		font-family: $fontFamilySecond;
+		@include adaptiveValue("font-size", 32, 20);
+		span {
+			line-height: 150%;
+			font-size: toRem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__label {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		justify-content: center;
+		color: $primary100Color;
+		border-radius: toRem(30);
+		padding: toRem(5) toRem(12);
+		border: toRem(1) solid $primary100Color;
+		@media (max-width: $mobileSmall) {
+			width: toRem(36);
+			height: toRem(36);
+			padding: toRem(0);
+			border-radius: toRem(10);
+			span {
+				display: none;
+			}
+		}
+	}
+
+	&__svg {
+		display: flex;
+		width: toRem(20);
+		height: toRem(20);
+		align-items: center;
+		justify-content: center;
 	}
 }
 //========================================================================================================================================================

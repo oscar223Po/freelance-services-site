@@ -19,18 +19,20 @@
 							</div>
 						</div>
 						<div class="advance__search search">
-							<input autocomplete="off" type="text" name="form[]" data-error="Error"
-								placeholder="Search course, event or author" class="search__input">
-							<div class="search__select">
-								<select name="form[]" data-class-modif="search">
-									<option value="1" selected>Courses №1</option>
-									<option value="2">Courses №2</option>
-									<option value="3">Courses №3</option>
-								</select>
+							<div class="search__main">
+								<input autocomplete="off" type="text" name="form[]" data-error="Error"
+									placeholder="Search course, event or author" class="search__input">
+								<div class="search__select">
+									<select name="form[]" data-class-modif="search">
+										<option value="1" selected>Courses №1</option>
+										<option value="2">Courses №2</option>
+										<option value="3">Courses №3</option>
+									</select>
+								</div>
+								<button type="button" class="search__button _icon-search"></button>
 							</div>
-							<button type="button" class="search__button _icon-search"></button>
+							<div class="search__tip">Popular : UI Design, UX Research, Android, C++</div>
 						</div>
-						<div class="advance__tip">Popular : UI Design, UX Research, Android, C++</div>
 					</div>
 				</div>
 			</section>
@@ -144,119 +146,129 @@
 						<a href="" class="headed__button button button--bord">More Authors</a>
 					</div>
 					<div class="author__items">
-						<div class="author__item item-author">
-							<div class="item-author__image"><img src="@img/landing-pages/home-page/author/01.jpg" alt="Image"></div>
-							<div class="item-author__main">
-								<div class="item-author__name">Ahmet Cetin</div>
-								<div class="item-author__courses">16 Courses</div>
+						<div class="author__item developer developer--white">
+							<div class="developer__main">
+								<div class="developer__icon"><img src="@img/landing-pages/home-page/author/01.jpg" alt="Image"></div>
+								<div class="developer__name">Ahmet Cetin</div>
+								<div class="developer__count">16 Courses</div>
 							</div>
-							<div class="item-author__cost">$100<span>/hours</span></div>
-							<div class="item-author__doing">
-								<svg class="item-author__svg" viewBox="0 0 32 32" fill="none">
-									<path opacity="0.2" d="M4.1375 9.325C4.04693 9.48057 3.99946 9.65748 4 9.8375V22.1625C4.00096 22.3405 4.04884 22.5152 4.13882 22.6688C4.2288 22.8224 4.35769 22.9496 4.5125 23.0375L15.5125 29.225C15.6608 29.3097 15.8292 29.3529 16 29.35L16.1125 16L4.1375 9.325Z" fill="#32BCA3" />
-									<path d="M28 22.1625V9.8375C27.999 9.65947 27.9512 9.48484 27.8612 9.33122C27.7712 9.1776 27.6423 9.05041 27.4875 8.9625L16.4875 2.775C16.3393 2.68943 16.1711 2.64437 16 2.64437C15.8289 2.64437 15.6607 2.68943 15.5125 2.775L4.5125 8.9625C4.35769 9.05041 4.22879 9.1776 4.13882 9.33122C4.04884 9.48484 4.00096 9.65947 4 9.8375V22.1625C4.00096 22.3405 4.04884 22.5152 4.13882 22.6688C4.22879 22.8224 4.35769 22.9496 4.5125 23.0375L15.5125 29.225C15.6607 29.3106 15.8289 29.3556 16 29.3556C16.1711 29.3556 16.3393 29.3106 16.4875 29.225L27.4875 23.0375C27.6423 22.9496 27.7712 22.8224 27.8612 22.6688C27.9512 22.5152 27.999 22.3405 28 22.1625V22.1625Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M27.8625 9.325L16.1125 16L4.13751 9.325" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M16.1125 16L16 29.35" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>3D Design</span>
-							</div>
-						</div>
-						<div class="author__item item-author">
-							<div class="item-author__image"><img src="@img/landing-pages/home-page/author/02.jpg" alt="Image"></div>
-							<div class="item-author__main">
-								<div class="item-author__name">Ahmet Cetin</div>
-								<div class="item-author__courses">16 Courses</div>
-							</div>
-							<div class="item-author__cost">$100<span>/hours</span></div>
-							<div class="item-author__doing">
-								<svg class="item-author__svg" viewBox="0 0 32 32" fill="none">
-									<path opacity="0.2" d="M15 7L7.5375 9.8C7.37305 9.86264 7.22777 9.96706 7.11598 10.103C7.00419 10.2389 6.92975 10.4016 6.9 10.575L4 28L21.4375 25.1C21.6096 25.0706 21.7709 24.9962 21.9048 24.8842C22.0387 24.7722 22.1406 24.6267 22.2 24.4625L25 17L15 7ZM14.5 20C14.0055 20 13.5222 19.8534 13.1111 19.5787C12.7 19.304 12.3795 18.9135 12.1903 18.4567C12.0011 17.9999 11.9516 17.4972 12.048 17.0123C12.1445 16.5273 12.3826 16.0819 12.7322 15.7322C13.0819 15.3826 13.5273 15.1445 14.0123 15.048C14.4972 14.9516 14.9999 15.0011 15.4567 15.1903C15.9135 15.3795 16.304 15.7 16.5787 16.1111C16.8534 16.5222 17 17.0055 17 17.5C16.9967 18.162 16.7323 18.796 16.2641 19.2641C15.796 19.7323 15.162 19.9967 14.5 20Z" fill="#32BCA3" />
-									<path d="M14.5 20C15.8807 20 17 18.8807 17 17.5C17 16.1193 15.8807 15 14.5 15C13.1193 15 12 16.1193 12 17.5C12 18.8807 13.1193 20 14.5 20Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M4 28L12.7375 19.2625" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M4 28L21.4375 25.1C21.6096 25.0706 21.7709 24.9962 21.9048 24.8842C22.0387 24.7722 22.1406 24.6267 22.2 24.4625L25 17L15 7L7.5375 9.8C7.37305 9.86264 7.22777 9.96706 7.11598 10.103C7.00419 10.2389 6.92975 10.4016 6.9 10.575L4 28Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M25 17L28.2875 13.7125C28.382 13.6195 28.457 13.5085 28.5082 13.3862C28.5595 13.2639 28.5858 13.1326 28.5858 13C28.5858 12.8674 28.5595 12.7361 28.5082 12.6138C28.457 12.4915 28.382 12.3805 28.2875 12.2875L19.7125 3.7125C19.6195 3.61802 19.5085 3.54298 19.3862 3.49176C19.2639 3.44055 19.1326 3.41417 19 3.41417C18.8674 3.41417 18.7361 3.44055 18.6138 3.49176C18.4915 3.54298 18.3805 3.61802 18.2875 3.7125L15 7" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>Graphci Desgin</span>
+							<div class="developer__bottom">
+								<div class="developer__hours">$100<span>/hours</span></div>
+								<div class="developer__label">
+									<svg class="developer__svg" viewBox="0 0 32 32" fill="none">
+										<path opacity="0.2" d="M4.1375 9.325C4.04693 9.48057 3.99946 9.65748 4 9.8375V22.1625C4.00096 22.3405 4.04884 22.5152 4.13882 22.6688C4.2288 22.8224 4.35769 22.9496 4.5125 23.0375L15.5125 29.225C15.6608 29.3097 15.8292 29.3529 16 29.35L16.1125 16L4.1375 9.325Z" fill="#32BCA3" />
+										<path d="M28 22.1625V9.8375C27.999 9.65947 27.9512 9.48484 27.8612 9.33122C27.7712 9.1776 27.6423 9.05041 27.4875 8.9625L16.4875 2.775C16.3393 2.68943 16.1711 2.64437 16 2.64437C15.8289 2.64437 15.6607 2.68943 15.5125 2.775L4.5125 8.9625C4.35769 9.05041 4.22879 9.1776 4.13882 9.33122C4.04884 9.48484 4.00096 9.65947 4 9.8375V22.1625C4.00096 22.3405 4.04884 22.5152 4.13882 22.6688C4.22879 22.8224 4.35769 22.9496 4.5125 23.0375L15.5125 29.225C15.6607 29.3106 15.8289 29.3556 16 29.3556C16.1711 29.3556 16.3393 29.3106 16.4875 29.225L27.4875 23.0375C27.6423 22.9496 27.7712 22.8224 27.8612 22.6688C27.9512 22.5152 27.999 22.3405 28 22.1625V22.1625Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M27.8625 9.325L16.1125 16L4.13751 9.325" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M16.1125 16L16 29.35" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>3D Design</span>
+								</div>
 							</div>
 						</div>
-						<div class="author__item item-author">
-							<div class="item-author__image"><img src="@img/landing-pages/home-page/author/03.jpg" alt="Image"></div>
-							<div class="item-author__main">
-								<div class="item-author__name">Ahmet Cetin</div>
-								<div class="item-author__courses">16 Courses</div>
+						<div class="author__item developer developer--white">
+							<div class="developer__main">
+								<div class="developer__icon"><img src="@img/landing-pages/home-page/author/02.jpg" alt="Image"></div>
+								<div class="developer__name">Ahmet Cetin</div>
+								<div class="developer__count">16 Courses</div>
 							</div>
-							<div class="item-author__cost">$100<span>/hours</span></div>
-							<div class="item-author__doing">
-								<svg class="item-author__svg" viewBox="0 0 32 32" fill="none">
-									<path opacity="0.2" d="M25 6H7C6.73478 6 6.48043 6.10536 6.29289 6.29289C6.10536 6.48043 6 6.73478 6 7V25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26H25C25.2652 26 25.5196 25.8946 25.7071 25.7071C25.8946 25.5196 26 25.2652 26 25V7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6ZM19.5 19.5H12.5V12.5H19.5V19.5Z" fill="#32BCA3" />
-									<path d="M19.5 12.5H12.5V19.5H19.5V12.5Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M25 6H7C6.44772 6 6 6.44772 6 7V25C6 25.5523 6.44772 26 7 26H25C25.5523 26 26 25.5523 26 25V7C26 6.44772 25.5523 6 25 6Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M26 13H29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M26 19H29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M3 13H6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M3 19H6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M19 26V29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M13 26V29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M19 3V6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M13 3V6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>Front-End</span>
+							<div class="developer__bottom">
+								<div class="developer__hours">$100<span>/hours</span></div>
+								<div class="developer__label">
+									<svg class="developer__svg" viewBox="0 0 32 32" fill="none">
+										<path opacity="0.2" d="M15 7L7.5375 9.8C7.37305 9.86264 7.22777 9.96706 7.11598 10.103C7.00419 10.2389 6.92975 10.4016 6.9 10.575L4 28L21.4375 25.1C21.6096 25.0706 21.7709 24.9962 21.9048 24.8842C22.0387 24.7722 22.1406 24.6267 22.2 24.4625L25 17L15 7ZM14.5 20C14.0055 20 13.5222 19.8534 13.1111 19.5787C12.7 19.304 12.3795 18.9135 12.1903 18.4567C12.0011 17.9999 11.9516 17.4972 12.048 17.0123C12.1445 16.5273 12.3826 16.0819 12.7322 15.7322C13.0819 15.3826 13.5273 15.1445 14.0123 15.048C14.4972 14.9516 14.9999 15.0011 15.4567 15.1903C15.9135 15.3795 16.304 15.7 16.5787 16.1111C16.8534 16.5222 17 17.0055 17 17.5C16.9967 18.162 16.7323 18.796 16.2641 19.2641C15.796 19.7323 15.162 19.9967 14.5 20Z" fill="#32BCA3" />
+										<path d="M14.5 20C15.8807 20 17 18.8807 17 17.5C17 16.1193 15.8807 15 14.5 15C13.1193 15 12 16.1193 12 17.5C12 18.8807 13.1193 20 14.5 20Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M4 28L12.7375 19.2625" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M4 28L21.4375 25.1C21.6096 25.0706 21.7709 24.9962 21.9048 24.8842C22.0387 24.7722 22.1406 24.6267 22.2 24.4625L25 17L15 7L7.5375 9.8C7.37305 9.86264 7.22777 9.96706 7.11598 10.103C7.00419 10.2389 6.92975 10.4016 6.9 10.575L4 28Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M25 17L28.2875 13.7125C28.382 13.6195 28.457 13.5085 28.5082 13.3862C28.5595 13.2639 28.5858 13.1326 28.5858 13C28.5858 12.8674 28.5595 12.7361 28.5082 12.6138C28.457 12.4915 28.382 12.3805 28.2875 12.2875L19.7125 3.7125C19.6195 3.61802 19.5085 3.54298 19.3862 3.49176C19.2639 3.44055 19.1326 3.41417 19 3.41417C18.8674 3.41417 18.7361 3.44055 18.6138 3.49176C18.4915 3.54298 18.3805 3.61802 18.2875 3.7125L15 7" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>Graphci Desgin</span>
+								</div>
 							</div>
 						</div>
-						<div class="author__item item-author">
-							<div class="item-author__image"><img src="@img/landing-pages/home-page/author/01.jpg" alt="Image"></div>
-							<div class="item-author__main">
-								<div class="item-author__name">Ahmet Cetin</div>
-								<div class="item-author__courses">16 Courses</div>
+						<div class="author__item developer developer--white">
+							<div class="developer__main">
+								<div class="developer__icon"><img src="@img/landing-pages/home-page/author/03.jpg" alt="Image"></div>
+								<div class="developer__name">Ahmet Cetin</div>
+								<div class="developer__count">16 Courses</div>
 							</div>
-							<div class="item-author__cost">$100<span>/hours</span></div>
-							<div class="item-author__doing">
-								<svg class="item-author__svg" viewBox="0 0 32 32" fill="none">
-									<path opacity="0.2" d="M16 16C22.0751 16 27 13.3137 27 10C27 6.68629 22.0751 4 16 4C9.92487 4 5 6.68629 5 10C5 13.3137 9.92487 16 16 16Z" fill="#32BCA3" />
-									<path d="M16 16C22.0751 16 27 13.3137 27 10C27 6.68629 22.0751 4 16 4C9.92487 4 5 6.68629 5 10C5 13.3137 9.92487 16 16 16Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M5 10V16C5 19.3125 9.925 22 16 22C22.075 22 27 19.3125 27 16V10" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M5 16V22C5 25.3125 9.925 28 16 28C22.075 28 27 25.3125 27 22V16" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>Back-End</span>
-							</div>
-						</div>
-						<div class="author__item item-author">
-							<div class="item-author__image"><img src="@img/landing-pages/home-page/author/02.jpg" alt="Image"></div>
-							<div class="item-author__main">
-								<div class="item-author__name">Ahmet Cetin</div>
-								<div class="item-author__courses">16 Courses</div>
-							</div>
-							<div class="item-author__cost">$100<span>/hours</span></div>
-							<div class="item-author__doing">
-								<svg class="item-author__svg" viewBox="0 0 32 32" fill="none">
-									<path opacity="0.2" d="M18.625 19.975H21.5C22.3536 19.975 23.1988 19.8069 23.9874 19.4802C24.7761 19.1536 25.4926 18.6748 26.0962 18.0712C26.6998 17.4676 27.1786 16.7511 27.5052 15.9624C27.8319 15.1738 28 14.3286 28 13.475C28.0045 13.0976 27.971 12.7207 27.9 12.35L29.95 22.9C30.0816 23.6341 29.9753 24.3911 29.6465 25.0605C29.3178 25.73 28.7838 26.2769 28.1224 26.6216C27.4609 26.9662 26.7067 27.0906 25.9697 26.9765C25.2326 26.8625 24.5513 26.516 24.025 25.9875L18.625 19.9875V19.975Z" fill="#32BCA3" />
-									<path d="M19 13.5H23" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M9 13.5H13" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M11 11.5V15.5" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M21.5 6.9625L10.5 7C8.97218 7.00291 7.49401 7.54287 6.32406 8.52545C5.15411 9.50803 4.36685 10.8707 4.1 12.375V12.375L2.05 22.8875C1.91837 23.6216 2.02469 24.3786 2.35346 25.048C2.68222 25.7175 3.21624 26.2644 3.87765 26.6091C4.53905 26.9537 5.29327 27.0781 6.03031 26.964C6.76736 26.85 7.44871 26.5035 7.975 25.975V25.975L13.375 20L21.5 19.9625C23.2239 19.9625 24.8772 19.2777 26.0962 18.0587C27.3152 16.8397 28 15.1864 28 13.4625C28 11.7386 27.3152 10.0853 26.0962 8.86631C24.8772 7.64732 23.2239 6.9625 21.5 6.9625V6.9625Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M27.9 12.3375L29.95 22.8875C30.0816 23.6216 29.9753 24.3786 29.6465 25.048C29.3178 25.7175 28.7838 26.2644 28.1224 26.6091C27.4609 26.9537 26.7067 27.0781 25.9697 26.964C25.2326 26.85 24.5513 26.5035 24.025 25.975V25.975L18.625 19.975" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>Game Design</span>
+							<div class="developer__bottom">
+								<div class="developer__hours">$100<span>/hours</span></div>
+								<div class="developer__label">
+									<svg class="developer__svg" viewBox="0 0 32 32" fill="none">
+										<path opacity="0.2" d="M15 7L7.5375 9.8C7.37305 9.86264 7.22777 9.96706 7.11598 10.103C7.00419 10.2389 6.92975 10.4016 6.9 10.575L4 28L21.4375 25.1C21.6096 25.0706 21.7709 24.9962 21.9048 24.8842C22.0387 24.7722 22.1406 24.6267 22.2 24.4625L25 17L15 7ZM14.5 20C14.0055 20 13.5222 19.8534 13.1111 19.5787C12.7 19.304 12.3795 18.9135 12.1903 18.4567C12.0011 17.9999 11.9516 17.4972 12.048 17.0123C12.1445 16.5273 12.3826 16.0819 12.7322 15.7322C13.0819 15.3826 13.5273 15.1445 14.0123 15.048C14.4972 14.9516 14.9999 15.0011 15.4567 15.1903C15.9135 15.3795 16.304 15.7 16.5787 16.1111C16.8534 16.5222 17 17.0055 17 17.5C16.9967 18.162 16.7323 18.796 16.2641 19.2641C15.796 19.7323 15.162 19.9967 14.5 20Z" fill="#32BCA3" />
+										<path d="M14.5 20C15.8807 20 17 18.8807 17 17.5C17 16.1193 15.8807 15 14.5 15C13.1193 15 12 16.1193 12 17.5C12 18.8807 13.1193 20 14.5 20Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M4 28L12.7375 19.2625" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M4 28L21.4375 25.1C21.6096 25.0706 21.7709 24.9962 21.9048 24.8842C22.0387 24.7722 22.1406 24.6267 22.2 24.4625L25 17L15 7L7.5375 9.8C7.37305 9.86264 7.22777 9.96706 7.11598 10.103C7.00419 10.2389 6.92975 10.4016 6.9 10.575L4 28Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M25 17L28.2875 13.7125C28.382 13.6195 28.457 13.5085 28.5082 13.3862C28.5595 13.2639 28.5858 13.1326 28.5858 13C28.5858 12.8674 28.5595 12.7361 28.5082 12.6138C28.457 12.4915 28.382 12.3805 28.2875 12.2875L19.7125 3.7125C19.6195 3.61802 19.5085 3.54298 19.3862 3.49176C19.2639 3.44055 19.1326 3.41417 19 3.41417C18.8674 3.41417 18.7361 3.44055 18.6138 3.49176C18.4915 3.54298 18.3805 3.61802 18.2875 3.7125L15 7" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>Graphci Desgin</span>
+								</div>
 							</div>
 						</div>
-						<div class="author__item item-author">
-							<div class="item-author__image"><img src="@img/landing-pages/home-page/author/03.jpg" alt="Image"></div>
-							<div class="item-author__main">
-								<div class="item-author__name">Ahmet Cetin</div>
-								<div class="item-author__courses">16 Courses</div>
+						<div class="author__item developer developer--white">
+							<div class="developer__main">
+								<div class="developer__icon"><img src="@img/landing-pages/home-page/author/01.jpg" alt="Image"></div>
+								<div class="developer__name">Ahmet Cetin</div>
+								<div class="developer__count">16 Courses</div>
 							</div>
-							<div class="item-author__cost">$100<span>/hours</span></div>
-							<div class="item-author__doing">
-								<svg class="item-author__svg" viewBox="0 0 32 32" fill="none">
-									<path opacity="0.2" d="M23.5 12C25.433 12 27 10.433 27 8.5C27 6.567 25.433 5 23.5 5C21.567 5 20 6.567 20 8.5C20 10.433 21.567 12 23.5 12Z" fill="#32BCA3" />
-									<path opacity="0.2" d="M8.5 12C10.433 12 12 10.433 12 8.5C12 6.567 10.433 5 8.5 5C6.567 5 5 6.567 5 8.5C5 10.433 6.567 12 8.5 12Z" fill="#32BCA3" />
-									<path d="M16 27C17.933 27 19.5 25.433 19.5 23.5C19.5 21.567 17.933 20 16 20C14.067 20 12.5 21.567 12.5 23.5C12.5 25.433 14.067 27 16 27Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M23.5 12C25.433 12 27 10.433 27 8.5C27 6.567 25.433 5 23.5 5C21.567 5 20 6.567 20 8.5C20 10.433 21.567 12 23.5 12Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M8.5 12C10.433 12 12 10.433 12 8.5C12 6.567 10.433 5 8.5 5C6.567 5 5 6.567 5 8.5C5 10.433 6.567 12 8.5 12Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M8.50003 12V13C8.49837 13.3944 8.57484 13.7853 8.72502 14.15C8.8752 14.5147 9.09611 14.8461 9.37502 15.125C9.65392 15.4039 9.9853 15.6248 10.35 15.775C10.7147 15.9252 11.1056 16.0017 11.5 16H20.5C20.8945 16.0017 21.2853 15.9252 21.65 15.775C22.0148 15.6248 22.3461 15.4039 22.625 15.125C22.9039 14.8461 23.1249 14.5147 23.275 14.15C23.4252 13.7853 23.5017 13.3944 23.5 13V12" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M16 16V20" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-								<span>IOT</span>
+							<div class="developer__bottom">
+								<div class="developer__hours">$100<span>/hours</span></div>
+								<div class="developer__label">
+									<svg class="developer__svg" viewBox="0 0 32 32" fill="none">
+										<path opacity="0.2" d="M25 6H7C6.73478 6 6.48043 6.10536 6.29289 6.29289C6.10536 6.48043 6 6.73478 6 7V25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26H25C25.2652 26 25.5196 25.8946 25.7071 25.7071C25.8946 25.5196 26 25.2652 26 25V7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6ZM19.5 19.5H12.5V12.5H19.5V19.5Z" fill="#32BCA3" />
+										<path d="M19.5 12.5H12.5V19.5H19.5V12.5Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M25 6H7C6.44772 6 6 6.44772 6 7V25C6 25.5523 6.44772 26 7 26H25C25.5523 26 26 25.5523 26 25V7C26 6.44772 25.5523 6 25 6Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M26 13H29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M26 19H29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M3 13H6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M3 19H6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M19 26V29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M13 26V29" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M19 3V6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M13 3V6" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>Front-End</span>
+								</div>
+							</div>
+						</div>
+						<div class="author__item developer developer--white">
+							<div class="developer__main">
+								<div class="developer__icon"><img src="@img/landing-pages/home-page/author/02.jpg" alt="Image"></div>
+								<div class="developer__name">Ahmet Cetin</div>
+								<div class="developer__count">16 Courses</div>
+							</div>
+							<div class="developer__bottom">
+								<div class="developer__hours">$100<span>/hours</span></div>
+								<div class="developer__label">
+									<svg class="developer__svg" viewBox="0 0 20 20" fill="none">
+										<path opacity="0.2" d="M17.3405 11.8248C17.5283 11.6369 17.6999 11.4343 17.8536 11.219L18.4814 14.4497C18.5341 14.7497 18.4902 15.0587 18.3559 15.3322C18.2209 15.6072 18.0015 15.8318 17.7299 15.9734C17.4582 16.1149 17.1485 16.166 16.8458 16.1192C16.5486 16.0732 16.2735 15.9352 16.0591 15.7249L13.8176 13.2344H13.9375C14.5695 13.2344 15.1953 13.1099 15.7792 12.868C16.363 12.6262 16.8936 12.2717 17.3405 11.8248Z" fill="#32BCA3" stroke="#32BCA3" stroke-width="1.5" />
+										<path d="M12.375 8.4375H14.875" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M6.125 8.4375H8.625" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M7.375 7.1875V9.6875" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M13.9374 4.35156L7.06242 4.375C6.10753 4.37682 5.18367 4.7143 4.45245 5.32841C3.72123 5.94252 3.2292 6.79416 3.06242 7.73437V7.73437L1.78117 14.3047C1.6989 14.7635 1.76535 15.2366 1.97083 15.655C2.1763 16.0734 2.51006 16.4153 2.92344 16.6307C3.33682 16.8461 3.80821 16.9238 4.26886 16.8525C4.72952 16.7812 5.15536 16.5647 5.48429 16.2344V16.2344L8.85929 12.5L13.9374 12.4766C15.0149 12.4766 16.0482 12.0486 16.81 11.2867C17.5719 10.5248 17.9999 9.4915 17.9999 8.41406C17.9999 7.33662 17.5719 6.30331 16.81 5.54144C16.0482 4.77957 15.0149 4.35156 13.9374 4.35156V4.35156Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M17.9375 7.71094L19.2188 14.3047C19.301 14.7635 19.2346 15.2366 19.0291 15.655C18.8236 16.0734 18.4899 16.4153 18.0765 16.6307C17.6631 16.8461 17.1917 16.9238 16.7311 16.8525C16.2704 16.7812 15.8446 16.5647 15.5156 16.2344V16.2344L12.1406 12.4844" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>Game Design</span>
+								</div>
+							</div>
+						</div>
+						<div class="author__item developer developer--white">
+							<div class="developer__main">
+								<div class="developer__icon"><img src="@img/landing-pages/home-page/author/03.jpg" alt="Image"></div>
+								<div class="developer__name">Ahmet Cetin</div>
+								<div class="developer__count">16 Courses</div>
+							</div>
+							<div class="developer__bottom">
+								<div class="developer__hours">$100<span>/hours</span></div>
+								<div class="developer__label">
+									<svg class="developer__svg" viewBox="0 0 32 32" fill="none">
+										<path opacity="0.2" d="M16 16C22.0751 16 27 13.3137 27 10C27 6.68629 22.0751 4 16 4C9.92487 4 5 6.68629 5 10C5 13.3137 9.92487 16 16 16Z" fill="#32BCA3" />
+										<path d="M16 16C22.0751 16 27 13.3137 27 10C27 6.68629 22.0751 4 16 4C9.92487 4 5 6.68629 5 10C5 13.3137 9.92487 16 16 16Z" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M5 10V16C5 19.3125 9.925 22 16 22C22.075 22 27 19.3125 27 16V10" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M5 16V22C5 25.3125 9.925 28 16 28C22.075 28 27 25.3125 27 22V16" stroke="#32BCA3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<span>Back-End</span>
+								</div>
 							</div>
 						</div>
 					</div>
